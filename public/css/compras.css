@@ -1,0 +1,109 @@
+.compras {
+    background-color: rgb(89, 155, 88);
+
+}
+
+.sec-compras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-compras {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0 0 1rem;
+}
+
+.back-compras>span {
+    margin-left: 0.5rem;
+}
+
+.cuerpo-compras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.msg-compras {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    padding-bottom: 2rem;
+    width: 212px;
+    text-align: center;
+}
+
+.msg-compras>span {
+    padding-bottom: 1rem;
+}
+
+.items-compras {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 3rem;
+    width: 1386px;
+    flex-wrap: wrap;
+}
+
+.marco-compras {
+    height: 418px;
+    width: 430px;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.marco-compras-interior {
+    padding: 2rem 2.5rem 2rem 2.5rem;
+}
+
+.marco-compras-interior>span {
+    padding-left: 1rem;
+}
+
+
+.marco-comprasLineas {
+    margin-top: 1rem;
+    height: 250px;
+}
+
+.marco-compras-linea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.marco-compras-linea>img {
+    height: 48px;
+    width: 48px;
+    border-radius: 3rem;
+}
+
+.marco-compras-interior-notitulo>span {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.marco-compras-importe {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marco-compras-importe>span {
+    font-weight: bold;
+}
+
+.marco-compras-importe>p {
+    font-size: 36px;
+}
