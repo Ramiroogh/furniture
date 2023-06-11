@@ -1,0 +1,80 @@
+.usuarios {
+    background-color: rgb(89, 155, 88);
+
+}
+
+.containerUsuarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.linea {
+    border-top: 1px solid #000;
+    width: 100%;
+}
+
+.ct-usuarios-bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-bottom: 3.3125rem;
+}
+
+.ct-usuarios-bienvenida>i {
+    font-size: 70px;
+    padding-bottom: 0.6875rem;
+}
+
+.ct-users-msg {
+    width: 622px;
+    text-align: center;
+}
+
+.ct-users-hi {
+    padding-bottom: 2.125rem;
+}
+
+.ct-usuarios-opciones {
+    padding: 2.5rem 5.62rem 2.5rem 5.62rem;
+    width: 62rem;
+    height: 26.62rem;
+    background-color: white;
+    border-radius: 1rem;
+
+}
+
+.ct-user-opcion {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ct-user-opcion>p {
+    line-height: 1.2rem;
+    text-align: center;
+    width: fit-content;
+}
+
+.ct-user-opcion>button {
+    width: 160px;
+    height: 48px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+
+.ct-user-opcion-linea {
+    padding-top: 2rem;
+}

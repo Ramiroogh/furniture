@@ -48,6 +48,23 @@ app.use(express.static('public'))
 app.get('/articulos', (req, res) => {
     res.render('pages/articulos/index');
 });
+
+
+
+app.get('/favoritos', (req, res) => {
+    res.render('pages/favoritos.ejs')
+})
+
+
+app.get('/compras', (req, res) => {
+    res.render('pages/compras.ejs')
+})
+
+
+app.get('/usuarios', (req, res) => {
+    res.render('pages/usuarios.ejs')
+})
+
 >>>>>>> master
 
 
