@@ -1,0 +1,59 @@
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.Navbar>h1{
+    font-family: var(--tipografiaTitulos);
+    padding-left: 1rem;
+}
+
+.navbarmenu>a{
+    text-decoration: none;
+    padding: 1.5rem;
+    font-family: var(--tipografiaParrafos);
+    color: black;   
+}
+
+.navbaricono>a{
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.navbaricono{
+    display: flex;
+}
+
+.v-line{
+    border: solid 0.1rem;
+}
+
+@media(min-width:766px) and (max-width:1600px) {
+    .navbarhamburger{
+        display: none;
+    }
+}
+@media(max-width:767px) {
+    .navbarmenu{
+        display: none;
+    }
+    .navbaricono{
+        display: none;
+    }
+    .Navbar{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0rem;
+    }
+    .hamburguesa{
+        font-size: 1.5rem;
+        color: black;
+        padding-right: 1rem;
+    }
+}

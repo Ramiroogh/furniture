@@ -1,0 +1,23 @@
+<%- include('../../partials/nav.ejs') %>
+<body>
+    <div class="CrearCuenta">
+        <div class="NewCuenta">
+            <h1 class="TituloCrearCuenta">Crear Cuenta</h1>
+            <form action="" method="" class="formCrearCuenta">
+                <label for="NombreCrearCuenta">Nombre Completo</label>
+                <input type="text" class="NombreCrearCuenta" placeholder="Nombre" required>
+                <label for="ApellidoCrearCuenta">Apellido</label>
+                <input type="text" class="ApellidoCrearCuenta" placeholder="Apellido" required>
+                <label for="ContraseñaCrearCuenta">Contraseña</label>
+                <input type="password" class="ContraseñaCrearCuenta" placeholder="Contraseña" required>
+                <label for="emailCrearCuenta">Correo electrónico</label>
+                <input type="email" class="emailCrearCuenta" placeholder="Correo electrónico" required>
+                <button type="submit">Siguiente</button>
+            </form>
+            <a href="#">Terminos y Condiciones</a>
+        </div>
+        <img src="./imagenes/SillonesPeq.jpg" alt="" class="PicCrearCuenta">
+    </div>
+ 
+</body>
+<%- include('../../partials/footer.ejs') %>

@@ -1,0 +1,52 @@
+.CrearCuenta{
+    display: flex;
+}
+
+.NewCuenta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formCrearCuenta{
+    display: flex;
+    flex-direction: column;
+}
+
+.TituloCrearCuenta{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.formCrearCuenta>input{
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+}
+
+.formCrearCuenta>label{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.formCrearCuenta>button{
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: #2f7d32;
+    border: none;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 1rem;
+}
+
+.NewCuenta>a{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+    padding: 3rem;
+}
