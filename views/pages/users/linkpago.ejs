@@ -1,0 +1,72 @@
+<body>
+    <div class="FormaDePago">
+        <div class="MedioDePago">
+            <h2>Detalles de pago</h2>
+            <form action="">
+                <div class="NumeroTarjetaDiv">
+                    <label for="NumeroTarjeta">Numero de tarjeta</label>
+                    <input type="number" class="NumeroTarjeta" required>
+                </div>
+                <div class="DetalleTarjeta">
+                        <div class="VencimientoTarjeta">
+                            <label for="FechaVencimiento">Fecha de vencimiento</label>
+                            <div class="MesAño">
+                                <input type="number" class="MesVencimiento" required>
+                                <h2>/</h2>
+                                <input type="number" class="AñoVencimiento" required>
+                            </div>
+                        </div>
+                        <div class="NumeroCVVdiv">
+                            <label for="NumeroCVV">CVV</label>
+                            <input type="number" class="NumeroCVV" required>
+                        </div>
+                </div>
+                <hr>
+                <div class="Credito-Debito">
+                    <div class="CheckCredit-Debito">
+                        <div class="CheckCredit">
+                            <input type="checkbox" class="TipoTarjetaCredit" required>
+                            <label for="TipoTarjetaCredit">Credito</label>
+                        </div>
+                        <div class="CheckDebit">
+                            <input type="checkbox" class="TipoTarjetaDebit" required>
+                            <label for="TipoTarjetaDebit">Debito</label>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./Imagenes/Mastercard.PNG" alt="martecard" class="ImagenesTarjetas">
+                        <img src="./Imagenes/Visa.PNG" alt="visa" class="ImagenesTarjetas">
+                        <img src="./Imagenes/MercadoPago.PNG" alt="MercadoPago" class="ImagenesTarjetas2">
+                    </div>
+                </div>
+            </form>
+            <div><hr></div>
+            <p>Al realizar la compra, aceptas los términos y condiciones establecidos. <br>Es importante que revises detenidamente estos términos, ya que contienen información <br>relevante sobre tu compra, entrega, devoluciones y responsabilidades.</p>
+            <a href="#">Ver terminos y condiciones</a>            
+        </div>
+        <div class="ResumenParaPagar">
+            <h1>Resumen de compra</h1>
+            <hr>
+            <div class="ResumenTotal">
+               <div class="CantidadResumen">
+                    <h3>Cantidad</h3>
+                    <h3>1</h3>
+                </div>
+                <div class="ArtResumen">
+                    <h3>Articulo</h3>
+                    <h3>Descripcion del articulo</h3>
+                </div>
+                <div class="PrecioResumen">
+                    <h3>Precio</h3>
+                    <h3>$ 00.00</h3>
+                </div>
+            </div>
+            <div class="TotalApagar">
+                <h1>Total</h1>
+                <h1>$ 00.00</h1>
+            </div>
+            <hr>
+            <a href="#">Pagar</a>
+        </div>
+    </div>
+</body>

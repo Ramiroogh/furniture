@@ -1,0 +1,66 @@
+.Usuario::placeholder{
+    background-image: url(./IMAGENES/person.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: -0.1rem;
+}
+
+.contraseña::placeholder{
+    background-image: url(./IMAGENES/lock.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: -0.1rem;
+}
+
+.login{
+    display: flex;
+}
+
+.logintext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.formlogin{
+    display: flex;
+    flex-direction: column;
+}
+
+.PreRegistrar{
+    display: flex;
+    align-items: center;
+}
+
+.TituloInicia{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.formlogin>input{
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+}
+
+.formlogin>button{
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: #2f7d32;
+    border: none;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.PreRegistrar>h3{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.PreRegistrar>a{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}

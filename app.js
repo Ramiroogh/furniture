@@ -20,7 +20,6 @@ app.use(morgan('dev'))
 //sirve para los formularios envio de informacion al node js
 app.use(bodyParser.urlencoded({ extended: true }))
 
-
 //motor de plantilla
 app.set('view engine', 'ejs')
 
@@ -66,7 +65,7 @@ app.get('/usuarios', (req, res) => {
 
 
 
-
 app.listen(3030, () => {
     console.log(`Se esta ejecutando el servidor en el puerto 3030`)
 })
+

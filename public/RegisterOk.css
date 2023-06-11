@@ -1,0 +1,59 @@
+.Felicitaciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-align: center;
+    height: 35vh;
+    margin-top: 15%;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.RegistrerOk{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2f7d32 ;
+}
+
+.Felicitaciones>a{
+    width: 85%;
+    padding: 0.7rem;
+    text-decoration: none;
+    background-color: #2f7d32 ;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.Felicitaciones>h2{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+    margin-top: -0.5rem;
+}
+
+.Felicitaciones>h1{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 2rem;
+    margin-top: -4rem;
+}
+
+.checkregister{
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+}
+
+.Felicitaciones>button{
+    background-color:#2f7d32 ;
+    position:relative;
+    bottom: 4.5rem;
+    border-radius: 100%;
+    padding: 1rem;
+    border: solid white;
+}
