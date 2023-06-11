@@ -1,10 +1,7 @@
 import express from 'express'
 import path from 'path'
-<<<<<<< HEAD
-=======
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
->>>>>>> master
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
@@ -23,7 +20,6 @@ app.use(morgan('dev'))
 //sirve para los formularios envio de informacion al node js
 app.use(bodyParser.urlencoded({ extended: true }))
 
-<<<<<<< HEAD
 //motor de plantilla
 app.set('view engine', 'ejs')
 
@@ -33,7 +29,6 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.render('pages/index.ejs')
 })
-=======
 // Obtener la ruta del directorio actual
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
@@ -65,7 +60,6 @@ app.get('/usuarios', (req, res) => {
     res.render('pages/usuarios.ejs')
 })
 
->>>>>>> master
 
 
 
