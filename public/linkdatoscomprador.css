@@ -1,0 +1,156 @@
+.InfoComprador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #81aeb6;
+    height: 100vh;
+}
+.InfoComprador>h1{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+}
+.DatosComprador{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 24rem;
+}
+.DatosComprador>h2{
+    font-family: 'Public Sans', sans-serif;
+    text-align: left;
+    font-size: 1rem;
+
+}
+.DatosNombreApellido{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.DatosNombre{
+    display: flex;
+    flex-direction: column;
+}
+
+.DatosNombre>label{
+    font-family: 'Public Sans', sans-serif;
+    color: grey;
+    padding-bottom: 0.2rem; 
+    font-size: 0.8rem; 
+}
+
+.DatosNombre>input{
+    border-radius: 0.3rem;
+    border: 0.1rem solid grey;
+}
+
+.DatosApellido{
+    display: flex;
+    flex-direction: column;
+}
+
+.DatosApellido>label{
+    font-family: 'Public Sans', sans-serif;
+    color: grey;
+    padding-bottom: 0.2rem;
+    font-size: 0.8rem;  
+}
+
+.DatosApellido>input{
+    border-radius: 0.3rem;
+    border: 0.1rem solid grey;
+}
+
+.DatosTelefonoCorreo{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.DatosTelefono{
+    display: flex;
+    flex-direction: column;
+}
+
+.DatosTelefono>label{
+    font-family: 'Public Sans', sans-serif;
+    color: grey;
+    padding-bottom: 0.2rem;
+    font-size: 0.8rem;  
+    margin-top: 1rem;
+}
+.DatosTelefono>input{
+    border-radius: 0.3rem;
+    border: 0.1rem solid grey;
+}
+.DatosCorreo{
+    display: flex;
+    flex-direction: column;
+}
+.DatosCorreo>label{
+    font-family: 'Public Sans', sans-serif;
+    color: grey;
+    padding-bottom: 0.2rem;
+    font-size: 0.8rem;  
+    margin-top: 1rem;
+}
+.DatosCorreo>input{
+    border-radius: 0.3rem;
+    border: 0.1rem solid grey;
+}
+.DatosDirreccionCP{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 2rem;
+}    
+.DatosDirreccion{
+    display: flex;
+    flex-direction: column;
+}
+.DatosDirreccion>label{
+    font-family: 'Public Sans', sans-serif;
+    color: grey;
+    padding-bottom: 0.2rem;
+    font-size: 0.8rem; 
+    margin-top: 1rem; 
+}
+.DatosDirreccion>input{
+    border-radius: 0.3rem;
+    border: 0.1rem solid grey;
+}
+
+.DatosCP{
+    display: flex;
+    flex-direction: column;
+}
+.DatosCP>label{
+    font-family: 'Public Sans', sans-serif;
+    color: grey;
+    padding-bottom: 0.2rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;  
+}
+.DatosCP>input{
+    border-radius: 0.3rem;
+    border: 0.1rem solid grey;
+}
+
+.BotonOkDatosComprador{
+    width: 50%;
+    padding: 0.5rem;
+    background-color:blue;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.ResumenDatosComprador>p{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+}
