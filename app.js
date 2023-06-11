@@ -34,3 +34,5 @@ app.get('/', (req, res) => {
 app.listen(3030, () => {
     console.log(`Se esta ejecutando el servidor en el puerto 3030`)
 })
+
+console.log("la")
