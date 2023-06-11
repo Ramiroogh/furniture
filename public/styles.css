@@ -1,0 +1,49 @@
+/* Seccion de Articulos */
+.card__articulo {
+    background-color: #F6F5F5;
+    width: 17rem;
+    height: 31rem;
+    border-radius: 1rem;
+}
+.card__articulo img {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 2rem;
+}
+.card__articulo button {
+    width: 12rem;
+    height: 3rem
+}
+.btn__categoria {
+    width: 10rem;
+    height: 3rem;
+    background-color: black;
+    text-align: center;
+
+}
+.partials__articulos__container {
+    display: flex;
+}
+.category-container {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.articulos-container {
+    flex: 2;
+}
+footer {
+    background-color: #467848;
+    color: white;
+    padding: 2rem;
+}
+footer .links__footer {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+footer .footer__copyright {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+}
