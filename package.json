@@ -4,14 +4,6 @@
     "description": "",
     "type": "module",
     "main": "app.js",
-    "scripts": {
-<<<<<<< HEAD
-        "test": "echo \"Error: no test specified\" && exit 1"
-=======
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon app.js"
->>>>>>> master
-    },
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -28,11 +20,5 @@
         "morgan": "^1.10.0",
         "passport": "^0.6.0",
         "path": "^0.12.7"
-<<<<<<< HEAD
-=======
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.22"
->>>>>>> master
     }
 }
