@@ -20,22 +20,22 @@
 .IconoMenuHamburguesa>a{
     padding: 1rem;
     font-size: 3rem;
-    box-shadow: 0.15rem 0.15rem var(--ColorSombraBotonesVerde); 
+    box-shadow: 0.15rem 0.15rem #ccdfcd; 
 }
 
 .IconoMenuHamburguesa>h2{
-    font-family: var(--tipografiaTitulos);
+    font-family: 'Public Sans', sans-serif;
     font-size: 1rem;
 }
 
 .IconoPerson{
-    background-color: var(--ColorVerde);
+    background-color: #2f7d32;
     color: white;
     border-radius: 1rem;
 }
 
 .IconoShop{
-    background-color: var(--ColorAzul);
+    background-color: #0057ff;
     color: white;
     border-radius: 1rem;
 
@@ -50,13 +50,13 @@
 .BotonesMenuHamburguesa>a{
     display: flex;
     justify-content: center;
-    background-color: var(--ColorGrisBotones);
+    background-color:  #393939;
     width: 100%;
     padding: 0.7rem;
     text-decoration: none;
     color: white;
-    font-family: var(--tipografiaTitulos);
+    font-family: 'Public Sans', sans-serif;
     margin-top: 1rem;
     border-radius: 1rem;   
-    box-shadow: 0.15rem 0.15rem var(--ColorSombraBotones); 
+    box-shadow: 0.15rem 0.15rem #ccdfcd; 
 }

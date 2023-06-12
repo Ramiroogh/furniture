@@ -1,12 +1,12 @@
 .Usuario::placeholder{
-    background-image: url(./IMAGENES/person.svg);
+    background-image: url(../icons/person.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: -0.1rem;
 }
 
 .contraseña::placeholder{
-    background-image: url(./IMAGENES/lock.svg);
+    background-image: url(../icons/lock.svg);
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: -0.1rem;
