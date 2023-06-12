@@ -1,22 +1,32 @@
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</head>
-
-<header class=".bg-light d-flex justify-content-between px-5 mb-5">
-    <div>
-    <h1>Furniture</h1>
+<%- include('head') %>
+<div class="Header">
+    <div class="ContenedorTexto">
+        <div class="Titulo">
+            <h1>Furniture Style</h1>
+            <h1>For Future</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti voluptas itaque libero soluta nobis natus numquam asperiores laudantium provident eaque! Enim optio porro, architecto quidem modi corrupti temporibus quos officia.</p>
+        </div>
+        <div class="botones">
+            <button>Get Started</button>
+            <a href="#" class="video"><div class="playicon"><i class="bi bi-play-fill play"></i></div>What video</a>
+        </div>
+        <div class="seguidores">
+            <div class="seguidor">
+                <h1 class="Numseguidor">150+</h1>
+                <h2 class="Nombreseguidor">Furnitures</h2>
+            </div>
+            <div class="line">
+                <hr class="v-line"/>
+            </div>
+            <div class="seguidor">
+                <h1 class="Numseguidor">100+</h1>
+                <h2 class="Nombreseguidor">Customer</h2>
+            </div>
+        </div>
     </div>
-
-    <div class="d-flex gap-4">
-        <a class="text-dark text-decoration-none d-flex align-items-center justify-content-center" href="#">Productos</a>
-        <a class="text-dark text-decoration-none d-flex align-items-center justify-content-center" href="#">Contacto</a>
-        <a class="text-dark text-decoration-none d-flex align-items-center justify-content-center" href="#">¿Quienes somos?</a>
+    <div class="ContenedorImagenes">
+        <img src='../../public/img/SillonPequeño.jpg' alt="Sillon" class="Sillon"/>
+        <img src='../../public/img/MesaSillaPequeña.jpg' alt="MesaSilla" class="MesaSilla"/>
     </div>
-
-    <div w-8 h-2 class="d-flex gap-4">
-    <img src="/icons/carrito_icon_header.svg">
-    <img src="/icons/linea_separador_icon_header.svg">
-    <img src="/icons/user_icon_header.svg">
-    </div>
-</header>
+</div>
+</body>
