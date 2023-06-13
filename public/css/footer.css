@@ -1,40 +1,36 @@
-¡
+
 .espacio{
-    padding: 1.5rem;
+    padding: 1rem;
 }
 .promotion-img-txt>p {
     font-family: 'Poppins', sans-serif;
 }
 
 .promotion {
-    background-image: url(../img/SillonFooter2.jpg);
-    padding: 2rem 8rem 0rem 8rem;
-    background-position: center bottom 30%;
+    background-image: url(../img/FotoSillonFooter.jpg);
+    background-position: center bottom 60%;
     background-size: cover;
-    filter: brightness(0.7);
+    filter: brightness(0.6);
     background-color: #dbd8d8;
     width:70%;
+    height: 300px;
     margin: auto;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 
 .promotion-img-txt {
-    color: white;
-    /* position: absolute; */
+    color: rgba(255, 255, 255, 0.973);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 10vw;
-    left: 15vw;
+    height: 100%;
 }
-
 .promotion-img-txt-title {
     font-size: 3.5vw;
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
+    font-weight: bold;
 }
 
 .promotion-img-txt-p {
@@ -158,7 +154,8 @@ footer {
     position: absolute;
     width: 6.688rem;
     right: 1.5rem;
-    bottom: 0.7rem;
+    bottom: -0.25rem;
+    /* bottom: 0.4rem; */
     transform: translateY(-50%);
     height: 2rem;
     cursor: pointer;

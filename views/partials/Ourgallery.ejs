@@ -1,0 +1,69 @@
+<%- include('head.ejs') %>
+<div class="OurGallery">        
+    <div class="inicio2">
+        <h2 class="centro">Our Gallery</h2>
+    </div>
+    <section class="inicio2">
+        <hr/>
+        <div class="columna-4">
+            <button class="accordion"><strong>Sofa</strong></button>
+            <div class="panel">
+                <p>Sofa</p>
+                <p>Sofa</p>
+                <p>Sofa</p>
+                <p>Sofa</p>
+                <p>Sofa</p>
+            </div>
+            <button class="accordion"><strong>Cofee Table</strong></button>
+            <div class="panel">
+                <p>Cofee Table</p>
+                <p>Cofee Table</p>
+                <p>Cofee Table</p>
+                <p>Cofee Table</p>
+            </div>
+            <button class="accordion"><strong>Chest of Drawers</strong></button>
+            <div class="panel">
+                <p>Chest of Drawers</p>
+                <p>Chest of Drawers</p>
+                <p>Chest of Drawers</p>
+                <p>Chest of Drawers</p>
+            </div>
+            <button class="accordion"><strong>Dining Room table</strong></button>
+            <div class="panel">
+                <p>Dining Room table</p>
+                <p>Dining Room table</p>
+                <p>Dining Room table</p>
+                <p>Dining Room table</p>
+            </div>
+            <button class="accordion"><strong>Wardrobe</strong></button>
+            <div class="panel">
+                <p>Wardrobe</p>
+                <p>Wardrobe</p>
+                <p>Wardrobe</p>
+                <p>Wardrobe</p>
+            </div>
+        </div>
+        <div class="columna-3b">
+            <img src="../../img/SectionOurGallery.png" alt="ourgallery" class="ourgallerymobile" />
+        </div>
+    </section>
+    <div class="columna-3b">
+        <img class="ourgallerymobiledisplay" src="../../img/SectionOurGallery.png"/>
+    </div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
