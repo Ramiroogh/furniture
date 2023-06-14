@@ -1,0 +1,194 @@
+
+.SectionBenefits{
+    font-family: var(--tipografiaTitulos);
+    margin: 0;
+    width:100%;       
+}
+
+/* .titlebenefits{
+    color:black;
+} */
+
+/* header{
+margin: none;
+padding: none;
+} */
+
+.benefitsmobile>p {color: black;
+    font-size: 1rem;
+    font-family:var(--tipografiaParrafos);
+    margin: 0px;
+}
+.circlemobile1>p {color: black;
+    font-size: 1rem;
+    font-family:var(--tipografiaParrafos);
+    margin: 0px;
+}
+.centro{text-align:center;
+}
+
+/* a{text-decoration: none;
+    color: rgb(70 130 141);
+} */
+
+.columna-0{background: #308A8B; width: 100%;}
+.user{
+    width: 96%;
+    margin:0 auto;
+    margin-right: auto
+}
+.columna-1{
+    width: 100%;
+    margin-left: 8rem;
+    background-color:#F7DEF6;
+    display: flex;
+}
+.columna-2{
+    width: 95%;
+    margin-left: 0rem;
+    margin-right: auto;
+    background-color:#F7DEF6
+}
+
+.columna-4 {
+    min-width: 60%;
+    margin-left: 8rem;
+    background-color: #F7DEF6;
+}
+.columna-3{
+    width: 100%;
+    margin-right:4%;
+    flex-wrap: wrap;
+}
+
+.inicio {
+    display:flex; justify-content:flex-start;margin-left:12%;
+    padding-right:12%;
+    padding-bottom: 3%;
+    padding-top: 3%
+}
+
+/* .inicio {display:flex; justify-content:flex-start;} */
+
+.inicio2 {display:flex; justify-content:center;background-color:#F7DEF6;width: 100%;}
+
+.inicio3 {display:flex; justify-content:center;background-color:#F7DEF6;width: 40%;}
+
+
+.tabla{
+    display:flex; justify-content:center;
+}
+
+.inicio3 {display:flex; justify-content:center;}
+.inicio4 {display:flex; justify-content:space-around;background-color:white;}
+
+.inicio5 {display:flex; justify-content:center;     background-color: #22BABB;
+}
+
+/* a:hover {
+   color: slategray;
+}
+ */
+
+.benefitsmobile>h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.benefitsmobile>h3{
+    font-size: 1.6rem;
+    font-family: var(--tipografiaParrafos);
+    font-weight: 400;
+}
+.circlemobile1>h3{
+    font-size: 1.6rem;
+    font-family: var(--tipografiaParrafos);
+    font-weight: 400;
+}
+ 
+
+/* ul,ol{list-style: none;
+    width:100%}
+a{
+ padding:10px 15px;
+
+ color: white;
+ text-decoration: none;
+ display: inline;
+ font-size: 1.5em;
+ 
+}
+ */
+
+
+  /*  Media Queries */
+
+
+
+
+@media (max-width: 600px) {
+    .SectionBenefits{
+        width:100%;
+        margin-left:8%;
+    }
+}
+
+@media (max-width: 600px) {
+    .benefitsmobile{
+        width:100%;
+        margin-left:8%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .benefitsmobile{
+        width:80%;
+        margin-left:3%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .benefitsmobile1{
+        width:100%;
+        margin-left:8%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .benefitsmobile1{
+        width:100%;
+        margin-left:8%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .circlemobile{
+        display:none;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .circlemobile1{
+        width:100%;
+        margin-left:-7%;
+    }
+}
+
+@media (min-width: 900px) {
+    .circlemobile1{
+        display:none;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .circlemobile1{
+        width:100%;
+        margin-left:-3%;
+    }
+}
