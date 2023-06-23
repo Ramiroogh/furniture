@@ -10,7 +10,7 @@ import session from 'express-session';
 import MethodOverride from 'method-override';
 import passport from 'passport';
 import morgan from 'morgan';
-import mongoose from 'mongoose';
+
 
 const app = express();
 
@@ -56,16 +56,16 @@ app.get('/usuarios', (req, res) => {
 })
 
 // MongoDB conection
-mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => {
-    console.log('Conexión exitosa a la base de datos');
-  })
-  .catch((error) => {
-    console.error('Error al conectar con la base de datos:', error);
-  });
+// mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+//   .then(() => {
+//     console.log('Conexión exitosa a la base de datos');
+//   })
+//   .catch((error) => {
+//     console.error('Error al conectar con la base de datos:', error);
+//   });
 
 // Server initialitation
 app.listen(3030, () => {
