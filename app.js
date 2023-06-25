@@ -1,17 +1,18 @@
-import express from 'express'
-import path from 'path'
+import express from 'express';
+import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
-import dotenv from 'dotenv'
-import flash from 'connect-flash'
-import session from 'express-session'
-import MethodOverride from 'method-override'
-import passport from 'passport'
-import morgan from 'morgan'
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import flash from 'connect-flash';
+import session from 'express-session';
+import MethodOverride from 'method-override';
+import passport from 'passport';
+import morgan from 'morgan';
 
-const app = express()
+
+const app = express();
 
 
 //mostraria resultado de las peticiones en la consola o terminal
@@ -23,13 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 //motor de plantilla
 app.set('view engine', 'ejs')
 
-app.use(express.static('public'))
-
-
-app.get('/', (req, res) => {
-    res.render('pages/index.ejs')
-})
-
 // Obtener la ruta del directorio actual
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
@@ -37,35 +31,43 @@ const currentDir = dirname(fileURLToPath(import.meta.url));
 app.set('views', path.join(currentDir, 'views'));
 app.set('view engine', 'ejs');
 
-// folder public - en teoria es un middleware
+// Middleware, enlace a carpeta Public
 app.use(express.static('public'))
 
 // routes
+app.get('/', (req, res) => {
+    res.render('pages/index.ejs')
+})
+
 app.get('/articulos', (req, res) => {
-    res.render('pages/articulos/index');
+    res.render('pages/articulos/index.ejs');
 });
-
-
 
 app.get('/favoritos', (req, res) => {
     res.render('pages/favoritos.ejs')
 })
 
-
 app.get('/compras', (req, res) => {
     res.render('pages/compras.ejs')
 })
-
 
 app.get('/usuarios', (req, res) => {
     res.render('pages/usuarios.ejs')
 })
 
+// MongoDB conection
+// mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+//   .then(() => {
+//     console.log('Conexión exitosa a la base de datos');
+//   })
+//   .catch((error) => {
+//     console.error('Error al conectar con la base de datos:', error);
+//   });
 
-
-
-
+// Server initialitation
 app.listen(3030, () => {
     console.log(`Se esta ejecutando el servidor en el puerto 3030`)
 })
-
