@@ -89,7 +89,6 @@
 .marco-compras-interior-notitulo>span {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 .marco-compras-importe {

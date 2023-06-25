@@ -44,28 +44,28 @@ app.get('/articulos', (req, res) => {
 });
 
 app.get('/favoritos', (req, res) => {
-    res.render('pages/favoritos.ejs')
+    res.render('pages/users/favoritos.ejs')
 })
 
 app.get('/compras', (req, res) => {
-    res.render('pages/compras.ejs')
+    res.render('pages/users/compras.ejs')
 })
 
 app.get('/usuarios', (req, res) => {
-    res.render('pages/usuarios.ejs')
+    res.render('pages/users/usuarios.ejs')
 })
 
-// MongoDB conection
-// mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// })
-//   .then(() => {
-//     console.log('Conexión exitosa a la base de datos');
-//   })
-//   .catch((error) => {
-//     console.error('Error al conectar con la base de datos:', error);
-//   });
+//MongoDB conection
+mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => {
+        console.log('Conexión exitosa a la base de datos');
+    })
+    .catch((error) => {
+        console.error('Error al conectar con la base de datos:', error);
+    });
 
 // Server initialitation
 app.listen(3030, () => {
