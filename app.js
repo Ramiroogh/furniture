@@ -12,6 +12,7 @@ import passport from 'passport';
 import morgan from 'morgan';
 
 
+
 const app = express();
 
 
@@ -55,6 +56,7 @@ app.get('/usuarios', (req, res) => {
     res.render('pages/users/usuarios.ejs')
 })
 
+<<<<<<< HEAD
 //MongoDB conection
 mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
     useNewUrlParser: true,
@@ -66,7 +68,87 @@ mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongod
     .catch((error) => {
         console.error('Error al conectar con la base de datos:', error);
     });
+=======
+>>>>>>> 906f83b89110117f95fa3676f68132a7a3f32f85
 
+
+
+
+
+
+
+// Conexión a la base de datos usando Mongoose
+mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/ecommerce', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => {
+        console.log('Conexión exitosa a la base de datos');
+    })
+    .catch((error) => {
+        console.error('Error al conectar a la base de datos:', error);
+    });
+
+//Schema de productos
+const productoSchema = new mongoose.Schema({
+    nombre: {
+        type: String,
+        required: true
+    },
+    categoria: {
+        type: String,
+        required: true
+    },
+    precio: {
+        type: Number,
+        required: true
+    },
+    cantidad: {
+        type: Number,
+        required: true
+    },
+    descripcion: {
+        type: String,
+        required: true
+    },
+    url: {
+        type: String,
+        required: true
+    }
+
+});
+
+const Producto = mongoose.model('Producto', productoSchema);
+
+
+// Ruta para mostrar el formulario de alta de productos
+app.get('/agregarProductos', (req, res) => {
+    res.render('pages/admin/agregarProductos');
+});
+
+// Ruta para procesar el formulario y guardar el producto en la base de datos
+app.post('/agregarProductos', (req, res) => {
+    const { nombre, categoria, precio, cantidad, descripcion, url } = req.body;
+
+    const producto = new Producto({
+        nombre,
+        categoria,
+        precio,
+        cantidad,
+        descripcion,
+        url,
+    });
+
+    producto.save()
+        .then(() => {
+            console.log('Producto guardado exitosamente');
+            res.redirect('/agregarProductos');
+        })
+        .catch((error) => {
+            console.error('Error al guardar el producto:', error);
+            res.redirect('/agregarProductos');
+        });
+});
 // Server initialitation
 app.listen(3030, () => {
     console.log(`Se esta ejecutando el servidor en el puerto 3030`)

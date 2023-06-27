@@ -78,15 +78,23 @@
     height: 12rem;
     padding: 1rem;
 }
+.primersaludo>.saludosclientes{
+    margin-right: 5rem;
+}
 
+.segundosaludo>.saludosclientes{
+    margin-right: 1rem;
+}
 .saludosclientes>p{
     font-family: 'Poppins', sans-serif;
 }
 
 .primersaludo{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
+    padding-left: 1rem;
 }
 
 .imgcustomer{
@@ -115,9 +123,9 @@
 
 .segundosaludo{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    
+    gap: 2rem; 
 }
 
 .carousel-control-next-icon{
@@ -133,9 +141,18 @@
 @media(min-width:1600px) and (max-width:1000px) {
     .nextandprev{
         margin-bottom: 8rem;
-
     }
 
+}
+
+@media(min-width:300px) and (max-width:1100px) {
+    .saludoder{
+        display: none;
+    }
+    .titulosaludo{
+        width: 80%;
+        text-align: center;
+    }
 }
 
 
@@ -148,7 +165,7 @@
 
 }
 
-@media(min-width:700px) and (max-width:819px) {
+@media(min-width:520px) and (max-width:819px) {
     .saludosclientes{
         width: 21rem;
         height: 11rem;
@@ -156,19 +173,17 @@
     }
 }
 
-@media(min-width:600px) and (max-width:699px) {
+@media(min-width:400px) and (max-width:519px) {
     .saludosclientes{
-        width: 19rem;
-        height: 12rem;
+        width: 21rem;
+        height: 11rem;
         padding: 0.6rem;
     }
-}
-
-@media(min-width:550px) and (max-width:599px) {
-    .saludosclientes{
-        width: 17rem;
-        height: 12rem;
-        padding: 0.5rem;
+    .nav-item>a{
+        font-size: 0.7rem;
     }
-
+    .link-viewall{
+        font-size: 0.7rem;
+    }
 }
+

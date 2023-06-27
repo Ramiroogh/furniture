@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Editar Productos</title>
+</head>
+
+<body>
+    <h1>Editar Productos</h1>
+    <form action="/editarProductos" method="POST">
+        <input type="hidden" name="_id" value="<%= producto._id %>">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" value="<%= producto.nombre %>" required><br><br>
+        <label for="categoria">Categoría:</label>
+        <input type="text" name="categoria" value="<%= producto.categoria %>" required><br><br>
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" value="<%= producto.precio %>" required><br><br>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" value="<%= producto.descripcion %>" required><br><br>
+        <label for="url">URL:</label>
+        <input type="text" name="url" value="<%= producto.url %>" required><br><br>
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+
+</html>
