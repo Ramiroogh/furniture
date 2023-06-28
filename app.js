@@ -12,6 +12,8 @@ import MethodOverride from 'method-override';
 import passport from 'passport';
 import morgan from 'morgan';
 
+// Routes
+import carritoRoutes from './src/routes/carrito.js';
 
 const app = express();
 
@@ -21,7 +23,7 @@ app.use(morgan('dev'))
 
 //sirve para los formularios envio de informacion al node js
 app.use(bodyParser.urlencoded({ extended: true }))
-
+app.use(express.json());
 //motor de plantilla
 app.set('view engine', 'ejs')
 
@@ -35,6 +37,9 @@ app.set('view engine', 'ejs');
 // Middleware, enlace a carpeta Public
 app.use(express.static('public'))
 
+
+
+
 // routes
 app.get('/', (req, res) => {
     res.render('pages/index.ejs')
@@ -46,6 +51,11 @@ app.get('/descripcion', (req,res) => {
     res.render('pages/articulo_descripcion/index.ejs');
 })
 
+// Carrito
+// app.get('/carrito', (req,res) => {
+//   res.render('pages/carrito/index.ejs')
+// })
+app.use('/carrito', carritoRoutes);
 
 app.get('/favoritos', (req, res) => {
     res.render('pages/favoritos.ejs')
@@ -60,18 +70,18 @@ app.get('/usuarios', (req, res) => {
 })
 
 // MongoDB conection
-mongoose.connect('mongodb+srv://ramiro:<password>@cluster0.g0inku5.mongodb.net/?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => {
-    console.log('Conexión exitosa a la base de datos');
-  })
-  .catch((error) => {
-    console.error('Error al conectar con la base de datos:', error);
-  });
+// mongoose.connect('mongodb+srv://ramiro:<password>@cluster0.g0inku5.mongodb.net/?retryWrites=true&w=majority', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// })
+//   .then(() => {
+//     console.log('Conexión exitosa a la base de datos');
+//   })
+//   .catch((error) => {
+//     console.error('Error al conectar con la base de datos:', error);
+//   });
 
-const uri = "mongodb+srv://ramiro:<pa403blo>@cluster0.g0inku5.mongodb.net/?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://ramiro:<pa403blo>@cluster0.g0inku5.mongodb.net/?retryWrites=true&w=majority";
 
 // Server initialitation
 app.listen(3030, () => {

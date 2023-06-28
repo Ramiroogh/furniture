@@ -1,0 +1,25 @@
+<%- include('../../partials/nav.ejs') %>
+<%- include('../../partials/buscarArticulos.ejs') %>
+<%- include('../../partials/head.ejs') %>
+
+<h1>Carrito de Compras</h1>
+<% if (articulo) { %>
+  <p>Artículo agregado al carrito:</p>
+  <p>Nombre: <%= articulo.nombre %></p>
+  <p>Precio: <%= articulo.precio %></p>
+<% } else { %>
+  <p>No hay artículos en el carrito.</p>
+<% } %>
+
+<div class="carrito">
+    <% carrito.forEach(function(articulo) { %>
+      <div class="card">
+        <h2><%= articulo.nombre %></h2>
+        <p><%= articulo.descripcion %></p>
+        <p>Precio: <%= articulo.precio %></p>
+        <!-- Aquí puedes agregar más información del artículo -->
+      </div>
+    <% }); %>
+  </div>
+
+<%- include('../../partials/footer.ejs') %>
