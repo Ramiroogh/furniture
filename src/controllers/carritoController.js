@@ -1,16 +1,5 @@
 import Articulo from '../models/articulo.js';
 
-export const agregarArticulo = async (req, res) => {
-  try {
-    const { id } = req.body;
-    const articulo = await Articulo.findById(id);
-    res.render('carrito', { articulo });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: 'Error al agregar el artículo al carrito' });
-  }
-};
-
 // carritoController.js
 
 // Variable para almacenar los artículos del carrito
