@@ -78,6 +78,11 @@
     align-items: center;
 }
 
+.producto-detalle>p {
+    margin: 0;
+    line-height: 15px;
+}
+
 .producto-detalle>img {
     height: 64px;
     width: 64px;
@@ -91,7 +96,7 @@
 }
 
 .contenido-marco>button {
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
     background-color: black;
     height: 48px;
     width: 200px;
