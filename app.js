@@ -55,6 +55,10 @@ app.get('/usuarios', (req, res) => {
     res.render('pages/usuarios.ejs')
 })
 
+app.get('/QuienesSomos', (req, res) => {
+    res.render('pages/articulos/QuienesSomos.ejs')
+})
+
 // MongoDB conection
 // mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/', {
 //   useNewUrlParser: true,

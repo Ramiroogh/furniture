@@ -1,0 +1,242 @@
+.rectangulo1{
+    width: 60%;
+    height: 18rem;
+    background-color: orange;
+    border-radius: 0% 100% 0% 100% / 30% 0% 100% 100%;     
+}
+
+.QuienesSomos{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.QuienesSomosTitulo{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 3rem;
+}
+
+.QuienesSomosTitulo>h1{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.QuienesSomosTitulo>h2{
+    font-family: 'Poppins', sans-serif;
+}
+
+.QuienesSomosTitulo>p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.PorqueQuienesSomos{
+    display: flex;
+    align-items: center;
+}
+.PorqueQuienesSomosTexto>h1{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.PorqueQuienesSomosTexto>p{
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    line-height: 2rem;
+    padding-right: 3rem;
+    padding-left: 2rem;
+}
+.ImagenQuienSomos{
+    border-top-right-radius: 5rem;
+    width: 400px;
+    height: 200px;
+    margin: 2rem;
+    box-shadow: -10px -10px #725f66;
+}
+
+.rectangulo2{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 1rem;
+    width: 100vw;
+    background-color: #F7DEF6;
+    border-top-right-radius: 160px; 
+    padding-bottom: 1rem;
+}
+
+.ImgServicios{
+    padding: 3rem;
+    width: 400px;
+    height: 300px;
+    background-position: center;
+    border-top-right-radius: 160px; 
+}
+
+.TextoRectangulo2>h1{
+    font-family: 'Poppins', sans-serif; 
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+.TextoRectangulo2>h2{
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 300;
+    font-size: 1.1em;
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+.rectangulo3{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100vw;
+    border-top-right-radius: 100px; 
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.ImgCrecerConNosotros{
+    width: 200px;
+    height: 200px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    padding-left: 1rem;
+    padding-right: 3rem;
+
+}
+
+.TextoRectangulo3>h1{
+    font-family: 'Poppins', sans-serif; 
+    text-align: left;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.TextoRectangulo3>p{
+    font-family: 'Poppins', sans-serif; 
+    text-align: left;
+    line-height: 2rem;
+    font-weight: 300;
+    font-size: 1.1em;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+
+.rectangulo5{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color:  #2f7d32;
+    border-top-left-radius: 160px; 
+}
+
+.ImagenMision{
+    padding: 3rem;
+    width: 200px;
+    height: 300px;
+    background-position: center;
+    border-top-left-radius: 160px; 
+}
+
+.TextoMision{
+    padding-right: 5rem;
+    padding-left: 2rem;
+
+}
+.TextoMision>h1{
+    font-family: 'Poppins', sans-serif;
+    padding-right: 2rem;  
+}
+.TextoMision>p{
+    font-family: 'Poppins', sans-serif;  
+    line-height: 2rem;
+    padding-right: 2rem;
+}
+
+.Contactenos{
+    display: flex;
+    align-items: center;
+}
+
+.NumeroContacto{
+    padding-left: 2rem;
+}
+
+.NumeroContacto>p{
+    font-family: 'Poppins', sans-serif;
+    line-height: 2rem;
+    text-align: justify;
+    padding-right: 2rem;
+}
+.AtencionCliente>h1{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+.Contactenos>img{
+    width: 200px;
+    height: 200px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@media(min-width:1px) and (max-width:800px){
+    .ImgServicios{
+        display: none;
+    }
+    .ImagenMision{
+        display: none;
+    }
+    .TextoMision{
+        padding-right: 1rem;
+    
+    }
+    .TextoMision>h1{
+        text-align: right;
+        font-size: 1.5rem;
+    }
+    .TextoMision>p{
+        text-align: right;
+    }
+    .TextoRectangulo2>h1{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media(min-width:1px) and (max-width:730px){
+    .ImagenQuienSomos{
+        display: none;
+    }
+
+    .Contactenos>img{
+        display: none;
+    }
+
+    .AtencionCliente>h1{
+        font-size: 1.5rem;
+    }
+
+    .TextoRectangulo3>h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media(min-width:1px) and (max-width:520px){
+    .ImgCrecerConNosotros{
+        display: none;
+    }
+}
