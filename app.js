@@ -70,6 +70,10 @@ app.get('/usuarios', (req, res) => {
     res.render('pages/users/usuarios.ejs')
 })
 
+app.get('/QuienesSomos', (req, res) => {
+    res.render('pages/articulos/QuienesSomos.ejs')
+})
+
 
 
 
