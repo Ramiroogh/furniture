@@ -91,7 +91,10 @@ app.get('/QuienesSomos', (req, res) => {
 
 // Carrito
 app.get('/carrito', (req,res) => {
-    res.render('pages/carrito/index.ejs', { items })
+    res.render('pages/carrito/index.ejs')
+})
+app.get('/quienesSomos', (req,res) => {
+    res.render('pages/articulos/QuienesSomos.ejs')
 })
 
 // Ruta para mostrar el formulario de pago

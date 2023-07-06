@@ -2,28 +2,6 @@
 <%- include('../../partials/buscarArticulos.ejs') %>
 <%- include('../../partials/head.ejs') %>
 
-<body>
-  <% if (items.length > 0) { %>
-    <h1 class="text-center">Carrito de Compras</h1>
-    <% items.forEach((item) => { %>
-      <div class="text-center">
-        <img src="<%= item.image %>" alt="<%= item.title %>" class="mx-auto">
-        <h2 class="text-center"><%= item.title %></h2>
-        <p class="text-center"><%= item.price %> USD</p>
-      </div>
-    <% }); %>
-    <button onclick="pay()" class="btn btn-primary d-block mx-auto">Realizar Pago</button>
-  <% } else { %>
-    <h1 class="text-center">Carrito Vacío</h1>
-  <% } %>
-  
-
-  <script>
-    function pay() {
-      // Lógica para redirigir al formulario de pago
-      window.location.href = "/payment";
-    }
-  </script>
-</body>
+<h1>CARRITO</h1>
 
 <%- include('../../partials/footer.ejs') %>
