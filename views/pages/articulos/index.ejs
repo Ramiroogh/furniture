@@ -4,12 +4,21 @@
 
 
 <div class="partials__articulos__container m-5">
+
     <div class="category-container">
       <%- include('../articulos/categorias.ejs') %>
     </div>
+
     <div class="articulos-container">
-      <%- include('../../partials/articulos.ejs') %>
+      <% if (productos && productos.length > 0) { %>
+        <% productos.forEach((producto) => { %>
+          <p><%= producto.nombre %></p>
+        <% }); %>
+      <% } else { %>
+        <p>No hay productos disponibles</p>
+      <% } %>
     </div>
+    
   </div>
 
 <%- include('../../partials/footer.ejs') %>

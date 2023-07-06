@@ -2,20 +2,35 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
+import articulosRoutes from './src/routes/articulosRoutes.js';
 
+
+// Parsear solicitudes HTTP de formularios
+import bodyParser from 'body-parser';
+
+// ODM - MongoDB
+import mongoose from 'mongoose';
+// Modelo
+import Producto from './src/models/productos.js'
+
+// Variables de entorno
 import dotenv from 'dotenv';
+dotenv.config();
+
+// Modales de Alerta
 import flash from 'connect-flash';
+
+// Middleware Manejo de Sesiones
 import session from 'express-session';
-import MethodOverride from 'method-override';
 import passport from 'passport';
+
+import MethodOverride from 'method-override';
 import morgan from 'morgan';
 
 // Routes
 import carritoRoutes from './src/routes/carrito.js';
 
-
+// Instancia de la Aplicación - Entrypoint
 const app = express();
 
 
@@ -25,8 +40,6 @@ app.use(morgan('dev'))
 //sirve para los formularios envio de informacion al node js
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
-//motor de plantilla
-app.set('view engine', 'ejs')
 
 // Obtener la ruta del directorio actual
 const currentDir = dirname(fileURLToPath(import.meta.url));
@@ -42,6 +55,10 @@ app.use(express.static('public'))
 
 
 // routes
+app.use('/articulos', articulosRoutes);
+
+
+// VERBOS HTTP
 app.get('/', (req, res) => {
     res.render('pages/index.ejs')
 })
@@ -52,11 +69,8 @@ app.get('/descripcion', (req,res) => {
     res.render('pages/articulo_descripcion/index.ejs');
 })
 
-// Carrito
-// app.get('/carrito', (req,res) => {
-//   res.render('pages/carrito/index.ejs')
-// })
-app.use('/carrito', carritoRoutes);
+
+// app.use('/carrito', carritoRoutes);
 
 app.get('/favoritos', (req, res) => {
     res.render('pages/users/favoritos.ejs')
@@ -70,15 +84,40 @@ app.get('/usuarios', (req, res) => {
     res.render('pages/users/usuarios.ejs')
 })
 
+const items = [
+    {
+      image: "photo",
+      title: "Producto 1",
+      price: 10.99
+    },
+    {
+      image: "https://m.media-amazon.com/images/I/71RoNsV1jDL._AC_SX522_.jpg",
+      title: "Producto 2",
+      price: 19.99
+    },
+    {
+        image: "photo",
+        title: "Producto 3",
+        price: 19.99
+      }
+  ];
 
+// Carrito
+app.get('/carrito', (req,res) => {
+    res.render('pages/carrito/index.ejs', { items })
+})
 
-
+// Ruta para mostrar el formulario de pago
+app.get('/payment', (req, res) => {
+    res.render('paymentForm');
+});
 
 
 
 
 // Conexión a la base de datos usando Mongoose
-mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongodb.net/ecommerce', {
+
+mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -88,37 +127,6 @@ mongoose.connect('mongodb+srv://edu5800:SM7kUDFZ7eO7aSrf@cluster0.xz6yusr.mongod
     .catch((error) => {
         console.error('Error al conectar a la base de datos:', error);
     });
-
-//Schema de productos
-const productoSchema = new mongoose.Schema({
-    nombre: {
-        type: String,
-        required: true
-    },
-    categoria: {
-        type: String,
-        required: true
-    },
-    precio: {
-        type: Number,
-        required: true
-    },
-    cantidad: {
-        type: Number,
-        required: true
-    },
-    descripcion: {
-        type: String,
-        required: true
-    },
-    url: {
-        type: String,
-        required: true
-    }
-
-});
-
-const Producto = mongoose.model('Producto', productoSchema);
 
 
 // Ruta para mostrar el formulario de alta de productos
@@ -150,6 +158,7 @@ app.post('/agregarProductos', (req, res) => {
         });
 });
 // Server initialitation
-app.listen(3030, () => {
-    console.log(`Se esta ejecutando el servidor en el puerto 3030`)
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log(`Se esta ejecutando el servidor en el puerto ${PORT}`)
 })
