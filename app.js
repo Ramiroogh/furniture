@@ -88,6 +88,11 @@ app.get('/QuienesSomos', (req, res) => {
     res.render('pages/articulos/QuienesSomos.ejs')
 })
 
+app.get('/contacto', (req, res) => {
+    res.render('pages/users/contacto.ejs')
+})
+
+
 
 // Carrito
 app.get('/carrito', (req,res) => {
