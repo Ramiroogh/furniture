@@ -84,23 +84,10 @@ app.get('/usuarios', (req, res) => {
     res.render('pages/users/usuarios.ejs')
 })
 
-const items = [
-    {
-      image: "photo",
-      title: "Producto 1",
-      price: 10.99
-    },
-    {
-      image: "https://m.media-amazon.com/images/I/71RoNsV1jDL._AC_SX522_.jpg",
-      title: "Producto 2",
-      price: 19.99
-    },
-    {
-        image: "photo",
-        title: "Producto 3",
-        price: 19.99
-      }
-  ];
+app.get('/QuienesSomos', (req, res) => {
+    res.render('pages/articulos/QuienesSomos.ejs')
+})
+
 
 // Carrito
 app.get('/carrito', (req,res) => {
