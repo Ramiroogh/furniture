@@ -1,4 +1,3 @@
-import Articulo from '../models/articulo.js';
 
 // carritoController.js
 
