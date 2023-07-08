@@ -10,11 +10,12 @@
     background-image: url(../img/FotoSillonFooter.jpg);
     background-position: center bottom 60%;
     background-size: cover;
-    filter: brightness(0.6);
-    background-color: #dbd8d8;
+   
+    background-color: white;
     width:70%;
     height: 300px;
     margin: auto;
+    padding-bottom: 2rem;
 }
 
 .promotion-img-txt {
@@ -55,7 +56,6 @@
 
 
 footer {
-    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     background-color: #498e4c;

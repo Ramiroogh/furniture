@@ -5,6 +5,8 @@
     display: flex;   
     justify-content: space-around;
     padding-left: 3rem;  /* margen costado izquierdo*/
+    background-color: white;
+    padding-bottom: 2rem;
 }
 
 /* Alineacion a Contenedor Texto */
