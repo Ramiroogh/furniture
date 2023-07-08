@@ -4,7 +4,10 @@
     font-family: 'Poppins', sans-serif;
 
 }
-
+.ModernFurniture {
+    background-color: white;
+    padding-bottom: 2rem;
+}
 .nav-link{
     color: grey;
 }

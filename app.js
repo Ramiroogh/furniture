@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+
 import articulosRoutes from './src/routes/articulosRoutes.js';
 
 
@@ -62,9 +63,10 @@ app.use('/articulos', articulosRoutes);
 app.get('/', (req, res) => {
     res.render('pages/index.ejs')
 })
-app.get('/articulos', (req, res) => {
-    res.render('pages/articulos/index.ejs');
-});
+// app.get('/articulos', (req, res) => {
+//     res.render('pages/articulos/index.ejs');
+    
+// });
 app.get('/descripcion', (req,res) => {
     res.render('pages/articulo_descripcion/index.ejs');
 })
@@ -130,28 +132,28 @@ app.get('/agregarProductos', (req, res) => {
 });
 
 // Ruta para procesar el formulario y guardar el producto en la base de datos
-app.post('/agregarProductos', (req, res) => {
-    const { nombre, categoria, precio, cantidad, descripcion, url } = req.body;
+// app.post('/agregarProductos', (req, res) => {
+//     const { nombre, categoria, precio, cantidad, descripcion, url } = req.body;
 
-    const producto = new Producto({
-        nombre,
-        categoria,
-        precio,
-        cantidad,
-        descripcion,
-        url,
-    });
+//     const producto = new Producto({
+//         nombre,
+//         categoria,
+//         precio,
+//         cantidad,
+//         descripcion,
+//         url,
+//     });
 
-    producto.save()
-        .then(() => {
-            console.log('Producto guardado exitosamente');
-            res.redirect('/agregarProductos');
-        })
-        .catch((error) => {
-            console.error('Error al guardar el producto:', error);
-            res.redirect('/agregarProductos');
-        });
-});
+//     producto.save()
+//         .then(() => {
+//             console.log('Producto guardado exitosamente');
+//             res.redirect('/agregarProductos');
+//         })
+//         .catch((error) => {
+//             console.error('Error al guardar el producto:', error);
+//             res.redirect('/agregarProductos');
+//         });
+// });
 // Server initialitation
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

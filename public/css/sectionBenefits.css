@@ -2,7 +2,8 @@
 .SectionBenefits{
     font-family: var(--tipografiaTitulos);
     margin: 0;
-    width:100%;       
+    width:100%;
+    background-color: white;
 }
 
 /* .titlebenefits{

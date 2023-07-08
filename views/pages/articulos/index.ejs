@@ -3,16 +3,23 @@
 <%- include('../../partials/buscarArticulos.ejs') %>
 
 
+
 <div class="partials__articulos__container m-5">
-
-    <div class="category-container">
+  <div class="category-container">
       <%- include('../articulos/categorias.ejs') %>
-    </div>
-
-    <div class="articulos-container">
-
-    </div>
-    
   </div>
+
+  <div class="articulos-container">
+
+      <div class="row row-cols-2">
+          <% productos.forEach(producto => { %>
+              <div class="col">
+                  <%- include('../../partials/cardArticulo.ejs', { producto: producto }) %>
+              </div>
+          <% }) %>
+      </div>
+
+  </div>
+</div>
 
 <%- include('../../partials/footer.ejs') %>
