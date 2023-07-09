@@ -32,8 +32,77 @@
     border: solid 0.1rem;
 }
 
+.navbarhamburger>button{
+    background-color: white;
+    border: none;
+}
+.menuhamburguesa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.BotonesMenuHamburguesa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.IconosMenuHamburguesa{
+   display: flex;
+   padding-bottom: 3rem;
+}
+.IconoMenuHamburguesa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.IconoMenuHamburguesa>a{
+    padding: 1rem;
+    font-size: 3rem;
+    box-shadow: 0.15rem 0.15rem #ccdfcd; 
+}
+
+.IconoMenuHamburguesa>h2{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.IconoPerson{
+    background-color: #2f7d32;
+    color: white;
+    border-radius: 1rem;
+}
+
+.IconoShop{
+    background-color: #0057ff;
+    color: white;
+    border-radius: 1rem;
+
+}
+
+.IconosMenuHamburguesa>.v-line{
+    height: 70px;
+    margin: 0.5rem;
+}
+
+
+.BotonesMenuHamburguesa>a{
+    display: flex;
+    justify-content: center;
+    background-color:  #393939;
+    width: 100%;
+    padding: 0.7rem;
+    text-decoration: none;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 1rem;
+    border-radius: 1rem;   
+    box-shadow: 0.15rem 0.15rem #ccdfcd; 
+}
 @media(min-width:766px) and (max-width:1600px) {
     .navbarhamburger{
+        display: none;
+    }
+    .menuhamburguesa{
         display: none;
     }
 }
@@ -56,4 +125,19 @@
         color: black;
         padding-right: 1rem;
     }
+
+    .menuhamburguesa{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 3.5rem;
+        padding: 1.5rem;
+        background-color: white;
+        transform: translateX(-100%);
+        left: 0;
+    }
+    .open{ 
+        transform: translateX(0) !important;
+    }
+
 }

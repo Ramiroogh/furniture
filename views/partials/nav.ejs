@@ -17,7 +17,40 @@
         </div>
 
         <div class="navbarhamburger">
-            <a href="#"><i class="bi bi-list hamburguesa"></i></a>
+            <button id="btnmenu"><i class="bi bi-list hamburguesa"></i></button> 
         </div>
     </div>
+
+    <div class="menuhamburguesa" id="_itemshamburguesa">
+        <div class="IconosMenuHamburguesa">
+            <div class="IconoMenuHamburguesa">
+                <a href="#" class="IconoPerson"><i class="bi bi-person"></i></a>
+                <h2>Account</h2>
+            </div>
+
+            <hr class="v-line"/>
+            
+            <div class="IconoMenuHamburguesa">
+                <a href="#"  class="IconoShop"><i class="bi bi-cart3"></i></a>
+                <h2>Shop</h2>
+            </div>
+        </div>
+        <div class="BotonesMenuHamburguesa">
+            <a href="#" class="BotonesHamburguesa">Products</a>
+            <a href="#" class="BotonesHamburguesa">Contact</a>
+            <a href="#" class="BotonesHamburguesa">Term and Conditions</a>
+        </div>
+    </div> 
+
+   
+   
+
+    <script>
+        btnmenu.onclick = () =>{
+            _itemshamburguesa.classList.toggle("open")
+
+        }
+    
+    </script>
+        
 </body>
