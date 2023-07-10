@@ -7,6 +7,7 @@
     padding-left: 3rem;  /* margen costado izquierdo*/
     background-color: white;
     padding-bottom: 2rem;
+
 }
 
 /* Alineacion a Contenedor Texto */
@@ -130,6 +131,88 @@
     object-fit: cover;
 }
 
+
+@media(min-width:765px) and (max-width:1100px) {
+    .Header{
+        display: block;
+        padding: 0;
+    }
+    .ContenedorTexto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Titulo{
+        text-align: center;
+    }
+    .Titulo>h1{
+        padding-top: 1rem;
+    }
+    .botones{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+    }
+    .Titulo>p{
+        padding: 1rem;
+    }
+
+    /* Estilos Botones */
+
+    .botones>button{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .botones>a{
+        gap: 0.5rem; 
+        font-size: 1.5rem;
+    }
+
+    .playicon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .playicon>i{
+        font-size: 1.5rem;
+    }
+
+    .ContenedorImagenes{
+        display: block;
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+    .Sillon{
+        padding-right: 0.5rem;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+    }
+    
+    .MesaSilla{
+        padding-left: 0.5rem;
+        width: 300px;
+        height: 500px;
+        object-fit: cover;
+    
+    }
+
+    .seguidor>.Numseguidor{
+         font-size: 3rem;
+         padding: 0.5rem;
+    }
+    
+    .seguidor>.Nombreseguidor{
+        font-size: 1.5rem;
+    }
+   
+}
+
 @media(min-width:580px) and (max-width:766px) {
     .Header{
         display: block;
@@ -143,11 +226,40 @@
     .Titulo{
         text-align: center;
     }
+    .Titulo>p{
+        padding: 1rem;
+    }
+    .Titulo>h1{
+        padding-top: 1rem;
+    }
+
     .botones{
         display: block;
         display: flex;
         justify-content: space-around;
     }
+    .botones>button{
+        padding-left: 1.3rem;
+        padding-right: 1.3rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        font-size: 1.2rem;
+    }
+
+    .botones>a{
+        gap: 0.4rem; 
+        font-size: 1.2rem;
+    }
+
+    .playicon{
+        width: 45px;
+        height: 45px;
+    }
+
+    .playicon>i{
+        font-size: 1.5rem;
+    }
+   
 
     .ContenedorImagenes{
         display: block;
@@ -167,8 +279,16 @@
         width: 200px;
         height: 400px;
         object-fit: cover;
-    
     }
+
+    .seguidor>.Numseguidor{
+        font-size: 2.5rem;
+        padding: 0.3rem;
+   }
+   
+   .seguidor>.Nombreseguidor{
+       font-size: 1.3rem;
+   }
    
 }
 
@@ -184,6 +304,12 @@
     }
     .Titulo{
         text-align: center;
+    }
+    .Titulo>p{
+        padding: 1rem;
+    }
+    .Titulo>h1{
+        padding-top: 1rem;
     }
     .botones{
         display: block;
@@ -223,6 +349,12 @@
     }
     .Titulo{
         text-align: center;
+    }
+    .Titulo>p{
+        padding: 1rem;
+    }
+    .Titulo>h1{
+        padding-top: 1rem;
     }
     .botones{
         display: block;
