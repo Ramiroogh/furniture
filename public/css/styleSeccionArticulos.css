@@ -3,28 +3,48 @@ body {
     background-color: #EEEEEE;
 }
 .card__articulo {
+    width: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    
     border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.15s ease-in-out;
+}
+.card__articulo:hover {
+    box-shadow: 0 5px 4px rgba(5, 5, 5, 0.404);
 }
 .card__articulo img {
     width: 9rem;
     height: 9rem;
     margin-bottom: 2rem;
 }
+.card__articulo p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 .img_card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.parrafo_Precio {
+    font-size: 25px;
+    font-weight:400;
+}
 
 .btn__categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
     width: 10rem;
     height: 40px;
     background-color: #198754;
@@ -37,11 +57,13 @@ body {
 
 .partials__articulos__container {
     display: flex;
+    gap: 8rem;
+    margin: 2rem 2rem 0 2rem;
     background-color: rgb(238, 238, 238);
 }
 .category-container {
-    flex: 1;
-    margin-right: 1rem;
+    
+
 }
 
 .articulos-container {
@@ -87,13 +109,12 @@ body {
     text-decoration: none;
     border-radius: 0.25rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-  
   .btn_card_carrito:hover {
-    background-color: #5a6268;
+    background-color: #2c2d2e;
     border-color: #545b62;
-  }
+}
 
 .categoria{
     font-size: 20px;

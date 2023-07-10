@@ -61,6 +61,9 @@ footer {
     background-color: #498e4c;
     align-items: center;
 }
+.footer {
+    margin-top: 2rem;
+}
 
 .footer-lr{
     display: flex;

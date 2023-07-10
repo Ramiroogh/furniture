@@ -1,10 +1,12 @@
 <%- include('../../partials/nav.ejs') %>
-<%- include('../../partials/buscarArticulos.ejs') %>
 <%- include('../../partials/head.ejs') %>
 
 <div class="partials__articulos__container m-5">
     <div class="category-container">
-      <%- include('../articulos/categorias.ejs') %>
+
+        <button onclick="goBack()" class="btn btn-primary">Volver</button>
+
+
     </div>
     <h1>DESCRIPCION DEL ARTICULO</h1>
     <p>aca hay que sincronizar esta ruta, con el id del articulo, para irlo a buscar a la base de datos</p>
@@ -14,3 +16,9 @@
 
 
 <%- include('../../partials/footer.ejs') %>
+
+<script>
+  function goBack() {
+      window.history.back();
+  }
+</script>

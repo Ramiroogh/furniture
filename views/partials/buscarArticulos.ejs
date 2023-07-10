@@ -1,12 +1,21 @@
-
 <div class="buscarArticulos d-flex flex-column justify-content-center">
+    <form method="GET" action="/articulos">
+        
+        <div class="d-flex justify-content-center gap-2 mb-4">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+            <button type="button" class="btn btn-danger" onclick="limpiarInput()">Borrar</button>
 
-    <div class="d-flex justify-content-center gap-4 mb-4">
-        <button class="btn btn-dark">Buscar</button>
-        <input class="form-control" type="text" style="width: 40rem;" placeholder="Ingrese el nombre de un artículo">
-    </div>
-
-    <div class="bg-success d-flex justify-content-center ">
-        <p class="text-center text-white p-2 mt-2">¡Tu satisfacción, es nuestra Prioridad! :) - Envíos a todo el Pais</p>
+            <input id="busquedaInput" class="form-control" type="text" name="busqueda" style="width: 40rem;" placeholder="Ingrese el nombre de un artículo" value="<%= valorBusqueda %>">
+        </div>
+    </form>
+    
+    <div class="bg-success d-flex justify-content-center">
+        <p class="text-center text-white p-2 mt-2">¡Tu satisfacción es nuestra Prioridad! :) - Envíos a todo el País</p>
     </div>
 </div>
+
+<script>
+    function limpiarInput() {
+        document.getElementById('busquedaInput').value = '';
+    }
+</script>
