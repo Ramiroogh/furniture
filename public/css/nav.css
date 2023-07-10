@@ -99,7 +99,14 @@
     box-shadow: 0.15rem 0.15rem #ccdfcd; 
 }
 
+<<<<<<< HEAD
 
+=======
+.navbarhamburger>button{
+    background-color: white;
+    border: none;
+}
+>>>>>>> ana
 @media(min-width:766px) and (max-width:1600px) {
     .navbarhamburger{
         display: none;
@@ -143,3 +150,6 @@
     }
 
 }
+
+
+
