@@ -1,6 +1,6 @@
-<div class="card__articulo m-3 p-5">
+<div class="card__articulo m-2 p-2">
 
-    <a href="/descripcion" style="text-decoration: none; color: inherit;">
+    <a href="/articulos/<%= producto._id %>" style="text-decoration: none; color: inherit;">
 
         <div class="img_card">
             <img src="<%= producto.url %>">
@@ -10,15 +10,14 @@
 
         <p><%= producto.nombre %></p>
         <div class="d-flex flex-row justify-content-end gap-2">
-            <p class="fw-bold text-success">Precio</p>
-            <p class="fw-normal">$<%= producto.precio %></p>
+            <p class="parrafo_Precio text-success">Precio:</p>
+            <p class="parrafo_Precio">$<%= producto.precio %></p>
         </div>
 
     </a>
 
     <div class=" d-flex flex-column justify-content-center align-self-center">
-        <a href="/descripcion" class="btn_card_ver align-self-center">Ver</a>
-        <a href="#" class="btn_card_carrito align-self-center mt-3">Agregar al carrito</a>
+        <a href="/descripcion" class="btn_card_ver align-self-center fw-bold">Ver</a>
     </div>
     
 </div>

@@ -4,16 +4,16 @@
 
 
 
-<div class="partials__articulos__container m-5">
+<div class="partials__articulos__container">
   <div class="category-container">
       <%- include('../articulos/categorias.ejs') %>
   </div>
 
   <div class="articulos-container">
 
-      <div class="row row-cols-2">
+      <div class="row row-cols-2 g-4">
           <% productos.forEach(producto => { %>
-              <div class="col">
+              <div class="">
                   <%- include('../../partials/cardArticulo.ejs', { producto: producto }) %>
               </div>
           <% }) %>
