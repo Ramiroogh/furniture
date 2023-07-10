@@ -115,6 +115,7 @@
 
 .ContenedorImagenes{
     display: flex;
+    padding-bottom: 1rem;
 }
 
 .Sillon{
