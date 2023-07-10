@@ -1,8 +1,12 @@
 .Navbar{
+    background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 2rem;
+}
+.buscarArticulos {
+    background-color: white;
 }
 
 .Navbar>h1{
@@ -32,10 +36,6 @@
     border: solid 0.1rem;
 }
 
-.navbarhamburger>button{
-    background-color: white;
-    border: none;
-}
 .menuhamburguesa{
     display: flex;
     flex-direction: column;
@@ -98,6 +98,11 @@
     border-radius: 1rem;   
     box-shadow: 0.15rem 0.15rem #ccdfcd; 
 }
+
+.navbarhamburger>button{
+    background-color: white;
+    border: none;
+}
 @media(min-width:766px) and (max-width:1600px) {
     .navbarhamburger{
         display: none;
@@ -141,3 +146,6 @@
     }
 
 }
+
+
+
