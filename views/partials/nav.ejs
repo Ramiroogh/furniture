@@ -1,4 +1,4 @@
-<%- include('head.ejs') %>   
+<%- include('head.ejs') %>
     <div class="Navbar">
         <h1>Furniture</h1>
         <div class="navbarmenu">
@@ -9,13 +9,13 @@
         </div>
 
         <div class="navbaricono">
-            <a href="#"><i class="bi bi-person"></i></a>
-            <hr class="v-line"/>
+            <a href="/login"><i class="bi bi-person"></i></a>
+            <hr class="v-line" />
             <a href="/carrito"><i class="bi bi-cart3"></i></a>
         </div>
 
         <div class="navbarhamburger">
-            <button id="btnmenu"><i class="bi bi-list hamburguesa"></i></button> 
+            <button id="btnmenu"><i class="bi bi-list hamburguesa"></i></button>
         </div>
     </div>
 
@@ -25,9 +25,9 @@
                 <a href="/contacto" class="IconoPerson"><i class="bi bi-person"></i></a>
                 <h2>Cuenta</h2>
             </div>
-            <hr class="v-line"/>
+            <hr class="v-line" />
             <div class="IconoMenuHamburguesa">
-                <a href="/carrito"  class="IconoShop"><i class="bi bi-cart3"></i></a>
+                <a href="/carrito" class="IconoShop"><i class="bi bi-cart3"></i></a>
                 <h2>Shop</h2>
             </div>
         </div>
@@ -36,17 +36,17 @@
             <a href="/articulos" class="BotonesHamburguesa">Productos</a>
             <a href="/quienesSomos" class="BotonesHamburguesa">Quienes somos</a>
         </div>
-    </div> 
+    </div>
 
-   
-   
+
+
 
     <script>
-        btnmenu.onclick = () =>{
+        btnmenu.onclick = () => {
             _itemshamburguesa.classList.toggle("open")
 
         }
-    
+
     </script>
-        
-</body>
+
+    </body>
