@@ -145,6 +145,14 @@ app.get('/contacto', (req, res) => {
     res.render('pages/users/contacto.ejs')
 })
 
+app.get('/articulos_categoria', (req, res) => {
+    res.render('pages/users/articulos_categoria.ejs')
+})
+
+app.get('/articulos_listado', (req, res) => {
+    res.render('pages/users/articulos_listado.ejs')
+})
+
 
 app.get('/logout', (req, res) => {
     req.session.destroy((err) => {
@@ -189,7 +197,6 @@ app.get('/login', (req,res) => {
     res.render('pages/users/login.ejs')
 })
 
-<<<<<<< HEAD
 // Ruta para mostrar el formulario de pago
 app.get('/payment', (req, res) => {
     res.render('paymentForm');
@@ -314,12 +321,6 @@ app.get('/dashboard', (req, res) => {
 
 
 
-=======
-// Ruta para el register
-app.get('/register', (req,res) => {
-    res.render('pages/users/register.ejs')
-})
->>>>>>> ana
 
 // Conexión a la base de datos usando Mongoose
 

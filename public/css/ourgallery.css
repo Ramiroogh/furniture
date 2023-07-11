@@ -1,10 +1,22 @@
 .OurGallery{
     margin: 0;
-    width:100%;
+    width:100%;       
 }
 
+.centro{text-align:center;
+   
+}
+
+.ourgallerydisplay{
+    border-radius: 12%;
+    margin-left:20%;
+    margin-top:10%;
+        height:80%
+}
+
+
+
 .inicio2>h2{
-    padding-top: 1rem;
     font-size: 3rem;
     font-weight: 500;
     font-family:'Public Sans', sans-serif;
