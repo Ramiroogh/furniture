@@ -114,14 +114,6 @@ app.use('/articulos', articulosRoutes);
 app.get('/', (req, res) => {
     res.render('pages/index.ejs')
 })
-// app.get('/articulos', (req, res) => {
-//     res.render('pages/articulos/index.ejs');
-
-// });
-app.get('/descripcion', (req, res) => {
-    res.render('pages/articulo_descripcion/index.ejs');
-})
-
 
 // app.use('/carrito', carritoRoutes);
 

@@ -32,4 +32,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/descripcion/:id', async (req, res) => {
+  try {
+    const producto = await Producto.findById(req.params.id).exec();
+    res.render('pages/articulos/descripcion.ejs', { producto });
+  } catch (error) {
+    console.error('Error al obtener el producto:', error);
+    res.status(500).send('Error al obtener el producto');
+  }
+});
+
 export default router;
