@@ -1,7 +1,7 @@
 <%- include('../../partials/nav.ejs') %>
 <%- include('../../partials/head.ejs') %>
 
-<div class="partials__articulos__container m-5">
+<div class="articulo_descripcion m-5">
     <div class="category-container">
 
         <button onclick="goBack()" class="btn btn-primary">Volver</button>
@@ -9,6 +9,7 @@
 
     </div>
     <h1>DESCRIPCION DEL ARTICULO</h1>
+    <%- include('../../partials/articulos.ejs') %>
     <p>aca hay que sincronizar esta ruta, con el id del articulo, para irlo a buscar a la base de datos</p>
     <p>cada componente renderizado, debe renderizar con las propiedades de su coleccion, desde mongo, y con esto, acceder al id, crear una ruta con parametro id /:id</p>
   </div>
