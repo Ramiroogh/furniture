@@ -1,29 +1,22 @@
-<%- include('../../partials/head.ejs') %>
-    <%- include('../../partials/nav.ejs') %>
-        <div class="CrearCuenta">
-            <div class="NewCuenta">
-                <% if (message) { %>
-                    <p><%- message %></p>
-                    <% } %>
-                        <h1 class="TituloCrearCuenta">Crear Cuenta</h1>
-                        <form action="/register" method="POST" class="formCrearCuenta">
-                            <label for="NombreCrearCuenta">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" class="NombreCrearCuenta" placeholder="Nombre"
-                                required>
-                            <label for="UsuarioCrearCuenta">Usuario</label>
-                            <input type="text" id="usuario" name="usuario" class="UsuarioCrearCuenta"
-                                placeholder="Usuario" required>
-                            <label for="ContraseñaCrearCuenta">Contraseña</label>
-                            <input type="password" id="contraseña" name="contraseña" class="ContraseñaCrearCuenta"
-                                placeholder="Contraseña" required>
-                            <label for="emailCrearCuenta">Correo electrónico</label>
-                            <input type="email" id="email" name="email" class="emailCrearCuenta"
-                                placeholder="Correo electrónico" required>
-                            <button type="submit">Crear Cuenta</button>
-                        </form>
-                        <a href="#">Terminos y Condiciones</a>
-            </div>
-            <img src="../../../img/SillonesPeq.jpg" alt="" class="PicCrearCuenta">
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/nav.ejs') %>
+    <div class="CrearCuenta">
+        <div class="NewCuenta">
+            <h1 class="TituloCrearCuenta">Crear Cuenta</h1>
+            <form action="" method="" class="formCrearCuenta">
+                <label for="NombreCrearCuenta">Nombre Completo</label>
+                <input type="text" class="NombreCrearCuenta" placeholder="Nombre" required>
+                <label for="ApellidoCrearCuenta">Apellido</label>
+                <input type="text" class="ApellidoCrearCuenta" placeholder="Apellido" required>
+                <label for="ContraseñaCrearCuenta">Contraseña</label>
+                <input type="password" class="ContraseñaCrearCuenta" placeholder="Contraseña" required>
+                <label for="emailCrearCuenta">Correo electrónico</label>
+                <input type="email" class="emailCrearCuenta" placeholder="Correo electrónico" required>
+                <button type="submit">Siguiente</button>
+            </form>
+            <a href="#">Terminos y Condiciones</a>
         </div>
-        </body>
-        <%- include('../../partials/footer.ejs') %>
+        <img src="../../../img/SillonesPeq.jpg" alt="" class="PicCrearCuenta">
+    </div>
+</body>
+<%- include('../partials/footer.ejs') %>

@@ -184,7 +184,12 @@ app.get('/payment', (req, res) => {
     res.render('paymentForm');
 });
 
+// Ruta para el login
+app.get('/login', (req,res) => {
+    res.render('pages/users/login.ejs')
+})
 
+<<<<<<< HEAD
 // Ruta para mostrar el formulario de pago
 app.get('/payment', (req, res) => {
     res.render('paymentForm');
@@ -309,6 +314,12 @@ app.get('/dashboard', (req, res) => {
 
 
 
+=======
+// Ruta para el register
+app.get('/register', (req,res) => {
+    res.render('pages/users/register.ejs')
+})
+>>>>>>> ana
 
 // Conexión a la base de datos usando Mongoose
 
