@@ -1,0 +1,31 @@
+<%- include('../../partials/head.ejs') %>
+    <%- include('../../partials/nav.ejs') %>
+
+        <h1>Perfil</h1>
+        <form action="/perfil" method="POST">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="<%= user.nombre %>" required>
+            </div>
+            <div>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" value="<%= user.direccion %>" required>
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" value="<%= user.telefono %>" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" value="<%= user.email %>" required>
+            </div>
+            <button type="submit">Actualizar</button>
+        </form>
+        <% if (user.es_admin) { %>
+            <a href="/dashboard">Menu Administrador</a>
+            <% } %>
+                <a href="/logout">Cerrar sesión</a>
+
+                </body>
+
+                <%- include('../../partials/footer.ejs') %>
