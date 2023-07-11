@@ -1,5 +1,6 @@
 .CrearCuenta{
     display: flex;
+    
 }
 
 .NewCuenta{
@@ -8,6 +9,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 2rem;
 }
 
 .formCrearCuenta{
@@ -49,4 +51,29 @@
     font-size: 0.8rem;
     padding-left: 0.5rem;
     padding: 3rem;
+}
+
+
+
+
+@media(min-width:680px) and (max-width:950px) {
+    .PicCrearCuenta{
+        width: 400px;
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
+@media(min-width:575px) and (max-width:679px) {
+    .PicCrearCuenta{
+        width: 340px;
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
+@media(min-width:0px) and (max-width:574px) {
+    .PicCrearCuenta{
+        display: none;
+    }
 }
