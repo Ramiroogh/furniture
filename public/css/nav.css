@@ -109,7 +109,7 @@
     border: none;
     color: black;
 }
-@media(min-width:800px) and (max-width:1600px) {
+@media(min-width:800px) and (max-width:2000px) {
 
     .navbarhamburger{
         display: none;
