@@ -137,6 +137,14 @@ app.get('/contacto', (req, res) => {
     res.render('pages/users/contacto.ejs')
 })
 
+app.get('/articulos_categoria', (req, res) => {
+    res.render('pages/users/articulos_categoria.ejs')
+})
+
+app.get('/articulos_listado', (req, res) => {
+    res.render('pages/users/articulos_listado.ejs')
+})
+
 
 app.get('/logout', (req, res) => {
     req.session.destroy((err) => {
@@ -176,6 +184,10 @@ app.get('/payment', (req, res) => {
     res.render('paymentForm');
 });
 
+// Ruta para el login
+app.get('/login', (req,res) => {
+    res.render('pages/users/login.ejs')
+})
 
 // Ruta para mostrar el formulario de pago
 app.get('/payment', (req, res) => {
