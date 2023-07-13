@@ -240,9 +240,9 @@ app.get('/payment', (req, res) => {
 });
 
 // Ruta para el login
-app.get('/login', (req, res) => {
-    res.render('pages/users/login.ejs')
-})
+// app.get('/login', (req, res) => {
+//     res.render('pages/users/login.ejs')
+// })
 
 // Ruta para mostrar el formulario de pago
 app.get('/payment', (req, res) => {
