@@ -2,36 +2,73 @@
 body {
     background-color: #EEEEEE;
 }
-.card__articulo {
-    width: 400px;
-    height: 500px;
+@media (max-width: 800px) {
+    .category-container {
+      display: none;
+      visibility: hidden;
+    }
+    .parrafo_Precio {
+        font-size: 20px;
+      }
+  }
+  .grid__articulos__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    background-color: rgb(238, 238, 238);
+  }
+  
+  @media (max-width: 800px) {
+    .grid__articulos__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .grid__articulos__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+.articulos-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.15s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.card__articulo {
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.15s ease-in-out;
 }
 .card__articulo:hover {
     box-shadow: 0 5px 4px rgba(5, 5, 5, 0.404);
 }
 .card__articulo img {
-    width: 9rem;
-    height: 9rem;
+    max-width: 9rem;
+    max-height: 9rem;
     margin-bottom: 2rem;
 }
 .card__articulo p {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    font-size: 1rem;
   }
 .img_card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
+  min-width: 200px;
 }
 .parrafo_Precio {
     font-size: 25px;
@@ -61,16 +98,6 @@ body {
     margin: 2rem 2rem 0 2rem;
     background-color: rgb(238, 238, 238);
 }
-.category-container {
-    
-
-}
-
-.articulos-container {
-    flex: 2;
-}
-
-
 .btn_card_ver {
     display: flex;
   align-items: center;

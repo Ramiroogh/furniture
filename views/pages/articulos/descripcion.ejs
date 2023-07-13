@@ -1,55 +1,48 @@
 <%- include('../../partials/head.ejs') %>
-    <%- include('../../partials/nav.ejs') %>
+<%- include('../../partials/nav.ejs') %>
 
-        <button class="botonVolver" onclick="goBack()">
-            <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M12 5v14l-6-7 6-7z" fill="#ffffff" />
-            </svg>
-            Volver
-        </button>
+<button class="botonVolver" onclick="goBack()">
+    <svg class="icono" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M12 5v14l-6-7 6-7z" fill="#ffffff" />
+    </svg>
+    Volver
+</button>
 
-        <div>
-            <div class="articulo_descripcion">
-                <div class="img_card_descripcion">
-                    <img src="<%= producto.url %>">
-                </div>
+<div class="d-flex justify-content-center pb-3 pt-2">
+<div class="articulo_descripcion">
 
-                <div class="articulo_columna">
-
-                    <div>
-                        <div class="descripcion_producto_nombre">
-                            <p>
-                                <%= producto.nombre %>
-                            </p>
-                        </div>
-                        <p class="categoria"><span style="font-weight: bold;color: green">Categoria: </span>
-                            <%= producto.categoria %>
-                        </p>
-                        <p class="descripcion">
-                            <%= producto.descripcion %>
-                        </p>
-                    </div>
-
-                    <div class="d-flex flex-column justify-content-center align-items-center">
-                        <div class="d-flex flex-row justify-content-end gap-2 align-items-center">
-                            <p class="fs-3 text-uppercase">Precio </p>
-                            <p class="parrafo">$<%= producto.precio %>
-                            </p>
-                        </div>
-                        <div class=" d-flex flex-column justify-content-center align-self-center">
-                            <a href="/agregarCarrito/<%= producto._id %>"
-                                class="btn_card_añadirAlCarrito align-self-center fw-bold">Añadir al Carrito</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+        <div class="img_card_descripcion">
+            <img src="<%= producto.url %>">
         </div>
-        <%- include('../../partials/footer.ejs') %>
+        
+        <div class="articulo_columna">
+            
+            <div>
+                <div class="descripcion_producto_nombre">
+                    <p><%= producto.nombre %></p>
+                </div>
+                <p class="categoria"><span style="font-weight: bold;color: green">Categoria: </span><%= producto.categoria %></p>
+                <p class="descripcion"><%= producto.descripcion %></p>
+            </div>
 
-            <script>
-                function goBack() {
-                    window.history.back();
-                }
-            </script>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="d-flex flex-row justify-content-end gap-2 align-items-center">
+                    <p class="fs-3 text-uppercase">Precio </p>
+                    <p class="parrafo">$<%= producto.precio %></p>
+                </div>
+                <div class=" d-flex flex-column justify-content-center align-self-center">
+                    <a href="/articulos/descripcion/<%= producto._id %>" class="btn_card_añadirAlCarrito align-self-center fw-bold">Añadir al Carrito</a>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+</div>
+<%- include('../../partials/footer.ejs') %>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+  </script>

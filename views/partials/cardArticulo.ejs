@@ -1,4 +1,4 @@
-<div class="card__articulo m-2 p-2">
+<div class="card__articulo grid__articulos__container m-2 p-2">
 
     <a href="/articulos/descripcion/<%= producto._id %>" style="text-decoration: none; color: inherit;">
 
@@ -6,7 +6,7 @@
             <img src="<%= producto.url %>">
         </div>
         
-        <p class="categoria"><span style="font-weight: bold;">Categoria: </span><%= producto.categoria %></p>
+        <p class=""><span style="font-weight: bold;">Categoria: </span><%= producto.categoria %></p>
 
         <p><%= producto.nombre %></p>
         <div class="d-flex flex-row justify-content-end gap-2">

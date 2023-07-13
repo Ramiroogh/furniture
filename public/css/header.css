@@ -4,10 +4,8 @@
 .Header{
     display: flex;   
     justify-content: space-around;
-    padding-left: 3rem;  /* margen costado izquierdo*/
     background-color: white;
-    padding-bottom: 2rem;
-
+    padding: 1rem 0 2rem 3rem;
 }
 
 /* Alineacion a Contenedor Texto */

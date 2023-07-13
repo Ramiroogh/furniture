@@ -1,9 +1,10 @@
 .container_pasarella {
-    background-color: #81aeb6;
-    padding: 2rem;
+    background-color: #3472cf;
+    padding-bottom: 3rem;
 }
-.container_pasarella > h2 {
+.container_pasarella > h4 {
     color: white;
+    padding: 2rem;
 }
 
 /* CONTAINER CARDS PAGO */
@@ -11,42 +12,45 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #81aeb6;
+    background-color: #3472cf;
     height: 80vh;
     gap: 1rem;
     padding: 2rem;
+    margin-top: 5rem;
 }
 
 /* SECTION FORMULARIO */
 .MedioDePago{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     padding: 1rem;
+    
     border-radius: 1rem;
-    height: 500px;
+    height: 550px;
+    width: 500px;
+    gap: 2rem;
+}
+.MedioDePago > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.MedioDePago label {
+    color: grey;
 }
 .Input_DueñoTarjeta {
     width: 200px;
 }
-.NumeroTarjeta {
-    width: 250px;
-}
-.NumeroTarjeta label{
-    font-family: 'Public Sans', sans-serif;
-    color: grey;
-    padding-bottom: 0.2rem;   
-}
+
 .VencimientoTarjeta {
     display: flex;
     flex-direction: column;
 }
 .VencimientoTarjeta>label{
-    font-family: 'Public Sans', sans-serif;
     color: grey;
-    padding-bottom: 0.2rem;
 }
 .MesAño > input {
     width: 50px;
@@ -54,39 +58,23 @@
 .MesAño{
     display: flex;
     align-items: center;
-    height: 2rem;
 
 }
-
+.Slash {
+    margin: 0 10px; /* Ajusta el margen según sea necesario */
+}
 .CVV{
     display: flex;
     flex-direction: column;
-    height: 2rem;
-}
-.CVV>label{
-    font-family: 'Public Sans', sans-serif;
-    color: grey;
-    margin-top: -0.4rem;
-    padding-bottom: 0.2rem;
 }
 .CVV>input{
-    border-radius: 0.3rem;
-    border: 0.1rem solid grey;
-    width: 25%;
+    width: 60px;
 }
-
-.DetalleTarjeta {
-    display: flex;
-    align-items: center;
-}
-
 .Credito-Debito{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
-
 .ImagenesTarjetas{
     width: 60px;
     height: 30px;
@@ -111,7 +99,10 @@
     background-color: white;
     padding: 1rem;
     border-radius: 1rem;
-    height: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .ResumenTotal{
     display: flex;
@@ -127,7 +118,7 @@
     display: flex;
     justify-content: space-around;
 }
-.ResumenParaPagar>a{
+.pagar_button {
     display: flex;
     justify-content: center;
     padding: 0.5rem;

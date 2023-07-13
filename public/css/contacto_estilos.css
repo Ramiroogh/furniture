@@ -1,33 +1,31 @@
-.containercontact{
-  max-width: 960px;
-
+.form_contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 2rem;
 }
-
-.containerform {
-  margin-left:0.1em
+@media (max-width: 1000px) {
+  .form_contacto {
+    flex-direction: column;
+  }
 }
-
 .contactitle{
   color:white;
-  margin-left:1.8rem;
 }
-
 .notaform{
   font-size:10px;
 }
-
 .botonform{
   text-align: center;
   margin-left: 25%;
   margin-top: 10%;
-  margin-bottom: 10%;}
-
-
+  margin-bottom: 10%;
+}
 .contactcontainerleft{
-
   background-color:#02012e;
   border-radius: 3rem;
-  height: 30%;
-
-
+  max-height: 600px;
+  max-width: 600px;
+  padding: 2rem;
 }

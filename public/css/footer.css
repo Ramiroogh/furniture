@@ -1,11 +1,9 @@
-
 .espacio{
     padding: 1rem;
 }
 .promotion-img-txt>p {
     font-family: 'Poppins', sans-serif;
 }
-
 .promotion {
     background-image: url(../img/FotoSillonFooter.jpg);
     background-position: center bottom 60%;
@@ -15,7 +13,6 @@
     height: 300px;
     margin: auto;
 }
-
 .promotion-img-txt {
     color: rgba(255, 255, 255, 0.973);
     display: flex;
@@ -31,7 +28,6 @@
     justify-content: center;
     font-weight: bold;
 }
-
 .promotion-img-txt-p {
     font-size: 1.5vw;
     display: flex;
@@ -39,7 +35,6 @@
     padding-bottom: 1rem;
     align-items: center;
 }
-
 .promotion-button {
     text-decoration: none;
     width: 6rem;
@@ -51,37 +46,26 @@
     justify-content: center;
     align-items: center;
 }
-
-
 footer {
     display: flex;
     flex-direction: column;
     background-color: #498e4c;
     align-items: center;
 }
-.footer {
-    margin-top: 2rem;
-}
-
 .footer-lr{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-
-
 .footer-left {
     padding: 2rem 3rem 1rem 8rem;
     width: 50%;
 }
-
-
 .footer-left>h2 {
     color: white;
     font-size: 1.75rem;
     font-family: 'Public Sans', sans-serif;
 }
-
 .footer-left>p {
     display: flex;
     align-items: center;
@@ -91,7 +75,6 @@ footer {
     word-wrap: break-word;
     font-family: 'Poppins', sans-serif;
 }
-
 .footer-right {
     display: flex;
     flex-direction: column;
@@ -100,7 +83,6 @@ footer {
     padding: 2rem 8rem 1rem 3rem;
     width: 50%;
 }
-
 .footer-menu {
     display: flex;
     flex-direction: row;
@@ -110,7 +92,6 @@ footer {
     text-decoration: none;
     gap: 2rem;
 }
-
 .footer-menu>a {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -118,7 +99,6 @@ footer {
     text-decoration: none;
     font-size: 1.25rem;
 }
-
 .footer-right>p {
     font-size: 1.25rem;
     display: flex;
@@ -127,7 +107,6 @@ footer {
     padding-top: 2rem;
     font-family: 'Poppins', sans-serif; 
 }
-
 .footer-newsletter{
     padding-top: 1rem;
     position: relative;
@@ -142,7 +121,6 @@ footer {
     outline: none;
     height: 3.375rem;
 }
-
 ::placeholder {
     left: 20rem;
     padding: 1rem;
@@ -150,7 +128,6 @@ footer {
     font-size: 1rem;
     text-indent: 0.5rem;
 }
-
 .footer-newsletter-button{
     position: absolute;
     width: 6.688rem;
@@ -165,7 +142,6 @@ footer {
     font-size: 1rem;
     border: none;
 }
-
 .footer-copyright{
     margin-top: 2.313rem;
     margin-bottom: 0.1rem;
@@ -176,14 +152,11 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
-
 .footer-copyright>p{
     color: white;
     font-size: 1rem;
     font-family: 'roboto';
 }
-
 ::-webkit-input-placeholder {
     /* Para navegadores webkit como Chrome, Safari y Opera */
     color: black;
@@ -205,8 +178,6 @@ footer {
     /* Para navegadores Microsoft Edge */
     color: black;
 }
-
-
 
 
 /* media query para Laptop */

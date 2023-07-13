@@ -3,13 +3,30 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 2rem;
 }
-
 .buscarArticulos {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
-
+.form-control {
+    max-width: 100%;
+}
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+@media (max-width: 800px) {
+    .search {
+        flex-direction: column;
+    }
+    
+}
 .Navbar>h1{
     font-family: 'Public Sans', sans-serif;
     padding-left: 1rem;
@@ -153,6 +170,3 @@
     }
 
 }
-
-
-

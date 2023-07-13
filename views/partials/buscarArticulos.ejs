@@ -1,9 +1,12 @@
-<div class="buscarArticulos d-flex flex-column justify-content-center">
+<div class="buscarArticulos">
+
     <form method="GET" action="/articulos">
         
-        <div class="d-flex justify-content-center gap-2 mb-4">
-            <button type="submit" class="btn btn-primary">Buscar</button>
-            <button type="button" class="btn btn-danger" onclick="limpiarInput()">Borrar</button>
+        <div class="search">
+            <div class="d-flex justify-content-center gap-2">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+                <button type="button" class="btn btn-danger" onclick="limpiarInput()">Borrar</button>
+            </div>
 
             <input id="busquedaInput" class="form-control" type="text" name="busqueda" style="width: 40rem;" placeholder="Ingrese el nombre de un artículo" value="<%= valorBusqueda %>">
         </div>

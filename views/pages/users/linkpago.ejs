@@ -1,19 +1,19 @@
 <div class="container_pasarella">
-    <h2>Detalles de Pago</h2>
+    <h4>DETALLES DE PAGO</h4>
     <div class="Card_Pago_Container">
 
         <div class="MedioDePago">
         
-            <div class="NumeroTarjetaDiv">
+            
             <form action="">
 
                 <div class="d-flex gap-3">
                     <div class="d-flex flex-column gap-2">
-                        <label for="NumeroTarjeta">Nombre</label>
+                        <label for="nombre">Nombre</label>
                         <input type="text" class="Input_DueñoTarjeta" required>
                     </div>
                     <div class="d-flex flex-column gap-2">
-                        <label for="NumeroTarjeta">Apellido</label>
+                        <label for="apellido">Apellido</label>
                         <input type="text" class="Input_DueñoTarjeta" required>
                     </div>
                 </div>
@@ -23,68 +23,61 @@
                     <input type="number" class="NumeroTarjeta" required>
                 </div>
                     
-                <div class="VencimientoTarjeta">
-                    <label for="FechaVencimiento">Fecha de vencimiento</label>
-                    <div class="MesAño align-items-center">
-                        <input type="number" class="Vencimiento" required>
-                        <p>/</p>
-                        <input type="number" class="Vencimiento" required>
-                    </div>
+                <label for="FechaVencimiento">Fecha de vencimiento</label>
+                <div class="MesAño align-items-center">
+                    <input type="number" required>
+                    <span class="Slash">/</span>
+                    <input type="number" required>
                 </div>
-
-                <div class="DetalleTarjeta">
-                    <div class="CVV">
-                        <label for="NumeroCVV">CVV</label>
-                        <input type="number" class="NumeroCVV" required>
-                    </div>
+                <div class="CVV">
+                    <label for="NumeroCVV">CVV</label>
+                    <input type="number" class="NumeroCVV" required>
                 </div>
-
-            </div>
+            </form>
+            
                 
-                    </form>
-                
-                
-
                 <div class="Terminos_y_Condiciones_Formulario">
                     <div class="Credito-Debito">
                         <img src="../../../img/Mastercard.PNG" alt="martecard" class="ImagenesTarjetas">
                         <img src="../../../img/Visa.PNG" alt="visa" class="ImagenesTarjetas">
                         <img src="../../../img/MercadoPago.PNG" alt="MercadoPago" class="ImagenesTarjetasMP">
                     </div>
-
-                    <p>Al realizar la compra, aceptas los términos y condiciones establecidos.</p>
-                    <p>Es importante que revises detenidamente estos términos, ya que contienen informaciónrelevante sobre tu compra, entrega, devoluciones y responsabilidades.</p>
-                    <a href="#">Ver terminos y condiciones</a>
-                </div>
-        </div>
-
-
-    <div class="ResumenParaPagar">
-        <h4>Resumen de compra</h4>
-        <hr>
-
-        <div class="ResumenTotal">
-
-               <div class="articulosAgregados">
-                    <p>Cantidad</p>
-                    <p>1</p>
-                </div>
-                <div class="articulosAgregados">
-                    <p>Articulo</p>
-                    <p>Descripcion del articulo</p>
-                </div>
-                <div class="articulosAgregados">
-                    <p>Precio</p>
-                    <p>$ 00.00</p>
+                    <div class="w-50 d-flex flex-column">
+                        <p>Al realizar la compra, aceptas los términos y condiciones establecidos.</p>
+                        <p>Es importante que revises detenidamente estos términos, ya que contienen informaciónrelevante sobre tu compra, entrega, devoluciones y responsabilidades.    </p>
+                        <a href="#">Ver terminos y condiciones</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="TotalApagar">
-                <h4>Total</h4>
-                <p>$ 00.00</p>
+
+        <div class="ResumenParaPagar">
+            <div>
+            <h4>Resumen de compra</h4>
+                <div class="ResumenTotal">
+                    <div class="articulosAgregados">
+                        <p>Cantidad</p>
+                        <p>1</p>
+                    </div>
+                    <div class="articulosAgregados">
+                        <p>Articulo</p>
+                        <p>Descripcion del articulo</p>
+                    </div>
+                    <div class="articulosAgregados">
+                        <p>Precio</p>
+                        <p>$ 00.00</p>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <a href="#">Pagar</a>
+                
+                <div>
+                    <div class="TotalApagar">
+                        <h4>Total</h4>
+                        <p>$ 00.00</p>
+                    </div>
+                    <hr>
+                    <a class="pagar_button" href="#">Pagar</a>
+                </div>
         </div>
     </div>
 </div>
