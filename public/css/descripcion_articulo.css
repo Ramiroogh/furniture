@@ -101,4 +101,108 @@ border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 color: #fff;
 background-color: #1c1c1c;
 border-color: #000000;
+}.articulo_descripcion {
+    display: flex;
+    background-color: white;
+    padding: 3rem;
+    margin: 1rem;
+    max-width: 800px;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 800px) {
+  .articulo_descripcion {
+    flex-direction: column;
+  }
+}
+.articulo_columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3rem 0 3rem 0;
+}
+
+.articulo_descripcion img {
+    max-width: 400px;
+    max-height: 500px;
+    margin-bottom: 2rem;
+}
+.img_card_descripcion {
+  display: flex;
+  justify-content: center;
+}
+.articulo_descripcion p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .botonVolver {
+    display: flex;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0 0 48px;
+    transition: color 0.15s ease-in-out, background-color 0.20s ease-in-out;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  .botonVolver:hover {
+    color: rgb(101, 248, 126);
+    background-color: #383737;
+  }
+  
+
+  .icono {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    color: white;
+    transition: color 0.15s ease-in-out,
+  }
+  .icono:hover {
+    color: rgb(101, 248, 126);
+  }
+.parrafo {
+    font-weight:700;
+    font-size: 2rem;
+}
+.descripcion_producto_nombre {
+    width: 300px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 20px;
+    font-weight: 600;
+}
+.descripcion {
+    max-width: 300px;
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.btn_card_añadirAlCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #242424;
+  background-color: transparent;
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  width: 150px;
+  height: 40px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn_card_añadirAlCarrito:hover {
+  color: #fff;
+  background-color: #1c1c1c;
+  border-color: #000000;
 }
