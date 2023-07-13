@@ -1,4 +1,4 @@
-<%- include('head.ejs') %>
+<!-- <%- include('head.ejs') %>
     <section class="compras">
         <a href="/" class="back-compras">
             <i class="bi bi-arrow-left-circle"></i>
@@ -13,7 +13,6 @@
                 <div class="items-compras">
                     <div class="marco-compras">
                         <div class="marco-compras-interior">
-                            <!-- <span>Articulos</span> -->
                             <div class="marco-compras-interior-notitulo">
                                 <% pedidos.forEach(pedido=> { %>
                                     <div class="marco-compras-linea">
@@ -36,5 +35,50 @@
                 </div>
                 <%- include('../partials/terminos') %>
             </div>
+    </section>
+    </body> -->
+
+<%- include('head.ejs') %>
+    <section class="compras">
+        <a href="/" class="back-compras">
+            <i class="bi bi-arrow-left-circle"></i>
+            <span>Volver</span>
+        </a>
+        <div class="sec-compras">
+            <div class="cuerpo-compras">
+                <div class="msg-compras">
+                    <span>Pedido realizado en la plataforma</span>
+                    <i class="bi bi-caret-down-fill"></i>
+                </div>
+                <div class="items-compras">
+                    <div class="marco-compras">
+                        <div class="marco-compras-interior">
+                            <!-- <span>Articulos</span> -->
+                            <div class="marco-compras-interior-notitulo">
+                                <% let total=0; %>
+                                    <% pedidos.forEach(pedido=> { %>
+                                        <div class="marco-compras-linea">
+                                            <span class="marco-compras-linea-detalle">
+                                                <%= pedido.producto.nombre %>
+                                            </span>
+                                            <span class="marco-compras-linea-subtotal">$<%= pedido.producto.precio %>
+                                            </span>
+                                        </div>
+                                        <% total +=pedido.producto.precio; %>
+                                            <% }); %>
+                                                <div class="marco-compras-importe">
+                                                    <span>Monto Total: </span>
+                                                    <p>
+                                                        <%= total %>
+                                                    </p>
+                                                </div>
+                                                <button class="btn-pagar">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../partials/terminos') %>
+            </div>
+        </div>
     </section>
     </body>
