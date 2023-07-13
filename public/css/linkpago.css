@@ -1,80 +1,83 @@
-.FormaDePago{
+.container_pasarella {
+    background-color: #81aeb6;
+    padding: 2rem;
+}
+.container_pasarella > h2 {
+    color: white;
+}
+
+/* CONTAINER CARDS PAGO */
+.Card_Pago_Container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #81aeb6;
-    height: 100vh;
+    height: 80vh;
     gap: 1rem;
+    padding: 2rem;
 }
 
+/* SECTION FORMULARIO */
 .MedioDePago{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 1rem;
     border-radius: 1rem;
-    height: 60%;
+    height: 500px;
 }
-.MedioDePago>h2{
-    font-family: 'Public Sans', sans-serif;
+.Input_DueñoTarjeta {
+    width: 200px;
 }
-.NumeroTarjetaDiv{
-    display: flex;
-    flex-direction: column;
+.NumeroTarjeta {
+    width: 250px;
 }
-.NumeroTarjetaDiv>label{
+.NumeroTarjeta label{
     font-family: 'Public Sans', sans-serif;
     color: grey;
     padding-bottom: 0.2rem;   
 }
-.NumeroTarjetaDiv>input{
-    width: 70%;
-    border-radius: 0.3rem;
-    border: 0.1rem solid grey;
-    margin-bottom: 2rem;
+.VencimientoTarjeta {
+    display: flex;
+    flex-direction: column;
 }
 .VencimientoTarjeta>label{
     font-family: 'Public Sans', sans-serif;
     color: grey;
     padding-bottom: 0.2rem;
 }
+.MesAño > input {
+    width: 50px;
+}
 .MesAño{
     display: flex;
     align-items: center;
     height: 2rem;
+
 }
-.MesAño>input{
-    border-radius: 0.3rem;
-    border: 0.1rem solid grey;
-    height: 50%;
-    width: 10%;
-}
-.MesAño>h2{
-    font-family: 'Public Sans', sans-serif;
-    padding: 0.2rem;   
-    font-size: 1rem;;
-}
-.NumeroCVVdiv{
+
+.CVV{
     display: flex;
     flex-direction: column;
     height: 2rem;
 }
-.NumeroCVVdiv>label{
+.CVV>label{
     font-family: 'Public Sans', sans-serif;
     color: grey;
     margin-top: -0.4rem;
     padding-bottom: 0.2rem;
 }
-.NumeroCVVdiv>input{
+.CVV>input{
     border-radius: 0.3rem;
     border: 0.1rem solid grey;
     width: 25%;
 }
-.DetalleTarjeta{
+
+.DetalleTarjeta {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .Credito-Debito{
@@ -82,87 +85,48 @@
     justify-content: space-around;
     align-items: center;
 }
-.CheckCredit-Debito{
-    display: flex;
-    flex-direction: column;
-}
 
-.CheckCredit>label{
-    font-family: 'Public Sans', sans-serif;
-}
-.CheckDebit>label{
-    font-family: 'Public Sans', sans-serif;
-}
-.MedioDePago>p{
-    font-family: 'Public Sans', sans-serif;
-    font-size: 0.7rem;
-    text-align: center;
-}
-.MedioDePago>a{
-    font-family: 'Public Sans', sans-serif;
-    font-size: 0.7rem;
-    text-align: center;
-}
 
 .ImagenesTarjetas{
     width: 60px;
     height: 30px;
 }
-.ImagenesTarjetas2{
-    width: 80px;
+.ImagenesTarjetasMP{
+    width: 90px;
     height: 30px;
     padding-left: 0.5rem;
 }
-.ResumenTotal{
+.Terminos_y_Condiciones_Formulario {
     display: flex;
-}
-
-.CantidadResumen{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 1.5rem;
+    font-size: 10px;
 }
 
-.CantidadResumen>h3{
-    font-family: 'Public Sans', sans-serif;
-}
 
-.ResumenParaPagar>h1{
-    font-family: 'Public Sans', sans-serif;
-    text-align: center;
-}
-
+    /* RESUMEN DE COMPRA */
 .ResumenParaPagar{
     background-color: white;
     padding: 1rem;
     border-radius: 1rem;
-    height: 60%;
+    height: 500px;
 }
-
-.ArtResumen{
+.ResumenTotal{
+    display: flex;
+}
+.ResumenTotal > p {
+    font-size: 20px;
+}
+.articulosAgregados{
     text-align: center;
-    padding: 1.5rem;
-}
-.ArtResumen>h3{
-    font-family: 'Public Sans', sans-serif;
-}
-.PrecioResumen{
-    text-align: center;
-    padding-top: 1.5rem;
-}
-
-.PrecioResumen>h3{
-    font-family: 'Public Sans', sans-serif;
+    margin: 1rem;
 }
 .TotalApagar{
     display: flex;
     justify-content: space-around;
 }
-
-.TotalApagar>h1{
-    font-family: 'Public Sans', sans-serif;
-
-}
-
 .ResumenParaPagar>a{
     display: flex;
     justify-content: center;
@@ -172,6 +136,5 @@
     border: none;
     border-radius: 0.5rem;
     color: white;
-    font-family: 'Public Sans', sans-serif;
     margin-top: 0.5rem;
 }

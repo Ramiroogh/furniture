@@ -111,6 +111,9 @@ passport.deserializeUser((id, done) => {
 // routes
 app.use('/articulos', articulosRoutes);
 
+app.get('/pasarella', (req, res) => {
+    res.render('pages/pasarella/pasarella.ejs')
+})
 
 // VERBOS HTTP
 app.get('/', (req, res) => {
