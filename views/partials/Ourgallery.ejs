@@ -1,60 +1,73 @@
 <%- include('head.ejs') %>
 
-<div class="OurGallery">        
-    <div class="inicio2">
-        <h2 class="centro">Nuestra Galeria</h2>
-    </div>
-    <section class="inicio2">
-        <hr/>
-        <div class="columna-4">
-            <button class="accordion"><strong>Sofa</strong></button>
-            <div class="panel">
-                <p>Sofa</p>
-            </div>
-            <button class="accordion"><strong>Mesa ratona</strong></button>
-            <div class="panel">
-                <p>Mesa ratona</p>
-               
-            </div>
-            <button class="accordion"><strong>Cajonera</strong></button>
-            <div class="panel">
-                <p>Cajonera</p>
-              
-            </div>
-            <button class="accordion"><strong>Mesa de comedor</strong></button>
-            <div class="panel">
-                <p>Mesa de comedor</p>
-                
-            </div>
-            <button class="accordion"><strong>Armario</strong></button>
-            <div class="panel">
-                <p>Armario</p>
-                
-            </div>
-        </div>
-        <div class="columna-3b">
-            <img class="ourgallerydisplay" src="../../img/sillon_gris_esquinero.jpg" alt="ourgallery" class="ourgallerymobile" width="80%" />
-        </div>
-    </section>
-    <div class="columna-3b">
-        <img class="ourgallerymobiledisplay" src="../../img/sillon_gris_esquinero.jpg"/>
-    </div>
-</div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-</script>
+        <h2 class="centro">Productos destacados</h2>
+
+
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+
+          <div class="card shadow-sm">
+            <img src="../../img/estanteria_cristal_destacada.png"/>
+
+            <div class="card-body">
+              <p class="card-text">
+                Modular Cristalero Aparador 1.20 Con Vidrios Colocados
+
+            </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="/articulos/"><button type="button" class="btn btn-sm btn-outline-secondary">Ver más productos</button></a>
+                </div>
+                <small class="text-body-secondary">Producto destacado</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../../img/estanteria_hierro_destacada.png" />
+            <div class="card-body">
+              <p class="card-text">Bliblioteca estanteria de madera maciza tipo araucaira. Hierro de Estructura caño.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="/articulos/"><button type="button" class="btn btn-sm btn-outline-secondary">Ver más productos</button></a>
+                </div>
+                <small class="text-body-secondary">Producto destacado</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../../img/mesa_ratona_destacada.png"/>
+            <div class="card-body">
+              <p class="card-text">Mesa ratona hierro y madera
+                rectangular
+                80cm x 40cm x 40cm alto</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="/articulos/"><button type="button" class="btn btn-sm btn-outline-secondary">Ver más productos</button></a>
+                </div>
+                <small class="text-body-secondary">Producto destacado</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+       
+       
+
+       
+      
+      
+
+      </div>
+    </div>
+  </div>
 
 </body>
