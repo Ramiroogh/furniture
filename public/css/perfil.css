@@ -1,0 +1,47 @@
+.perfiluser{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.perfiluser>h1{
+    font-family: 'Public Sans', sans-serif;
+}
+.FormularioCompletarPerfil{
+    padding: 1rem;
+}
+
+.FormularioCompletarPerfil>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.buttonperfiluser{
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    background-color: #2f7d32;
+    border: none;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.datosperfiluser>input{
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    border-radius: 0.7rem;
+    border: black solid 0.5px;
+}
+
+.datosperfiluser>label{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}

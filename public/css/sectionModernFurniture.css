@@ -12,6 +12,10 @@
     color: grey;
 }
 
+.card-img-top{
+    height: 300px;
+}
+
 .NavSearchdiv{
     display: flex;
     justify-content: space-between;
@@ -28,7 +32,8 @@
 
 .contenedorcardtexto{
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    padding: 0px;
 }
 
 .contenedorcard{
@@ -45,7 +50,6 @@
 
 .contenedorcardtexto>h3{
     font-size: 1rem;
-    color: grey;
     font-family: 'Poppins', sans-serif;;
 }
 
@@ -79,7 +83,9 @@
     background-color: white;
     width: 25rem;
     height: 12rem;
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .primersaludo>.saludosclientes{
     margin-right: 5rem;
@@ -101,20 +107,33 @@
 }
 
 .imgcustomer{
-    border: solid black 1px;
+    /* border: solid black 1px;
     border-radius: 50%;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: none;
+    background-color: none; */
+    border: none;
+    background-color: white;
+} 
+
+.perfilcustomer{
+   /*  display: flex;
+    justify-content: center; */
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    
 }
 
 .happycustomer{
     display: flex;
+    align-items: center;
     gap: 1rem;
     padding-left: 1rem;
 }
 
 .nombrehappycustomer>h4{
+    margin-top: 1rem;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
 }

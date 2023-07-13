@@ -24,6 +24,7 @@
 
 .Titulo>h1{
     font-family: 'Public Sans', sans-serif;
+    font-size: 2rem;
 }
 
 .Titulo>p{
@@ -131,6 +132,16 @@
     height: 500px;
     object-fit: cover;
 }
+
+@media(min-width:1200px) and (max-width:2000px){
+    .ContenedorTexto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
 
 
 @media(min-width:765px) and (max-width:1100px) {
