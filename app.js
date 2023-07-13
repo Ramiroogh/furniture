@@ -5,6 +5,7 @@ import { dirname } from 'path';
 
 import articulosRoutes from './src/routes/articulosRoutes.js';
 import User from './src/models/usuarios.js';
+import Pedido from './src/models/pedidos.js';
 
 
 // Parsear solicitudes HTTP de formularios
@@ -32,6 +33,7 @@ import morgan from 'morgan';
 
 // Routes
 import carritoRoutes from './src/routes/carrito.js';
+import Pedidos from './src/models/pedidos.js';
 
 // Instancia de la Aplicación - Entrypoint
 const app = express();
@@ -156,10 +158,113 @@ app.get('/logout', (req, res) => {
 });
 
 
-app.get('/carrito', (req, res) => {
+
+// app.get('/carrito', async (req, res) => {
+//     if (req.isAuthenticated()) {
+//         try {
+//             const user = req.user; // Accede al objeto de usuario autenticado
+//             const pedidos = await Pedido.find({ id_usuario: user.id });
+//             res.json(pedidos);
+//             const productoId = pedidos.map(pedidos => pedidos.id_producto);
+//             console.log(productoId)
+
+//             // Consulta la colección "productos" para obtener los productos correspondientes
+//             const obtenerProductos = async () => {
+//                 try {
+//                     const productos = await Producto.find({ _id: { $in: productoId } });
+//                     return productos;
+//                 } catch (error) {
+//                     console.error(error);
+//                     throw error;
+//                 }
+//             };
+
+//             // Asocia los productos con los pedidos utilizando el ID de producto
+//             const asociarProductosConPedidos = (productos) => {
+//                 return pedidos.map(pedido => {
+//                     const productoEncontrado = productos.find(producto => producto._id.toString() === pedido.id_producto);
+//                     return {
+//                         ...pedido,
+//                         producto: productoEncontrado
+//                     };
+//                 });
+//             };
+
+//             // Ejecuta la consulta y el proceso de asociación de productos con pedidos
+//             obtenerProductos()
+//                 .then(productos => {
+//                     const pedidosConProductos = asociarProductosConPedidos(productos);
+//                     console.log(pedidosConProductos);
+//                 })
+//                 .catch(error => {
+//                     console.error(error);
+//                 });
+//         } catch (error) {
+//             console.error(error);
+//             res.status(500).send('Error del servidor');
+//         }
+//     } else {
+//         res.redirect('/login');
+//     }
+// });
+
+
+app.get('/carrito', async (req, res) => {
     if (req.isAuthenticated()) {
-        const user = req.user; // Accede al objeto de usuario autenticado
-        res.render('pages/carrito/index.ejs', { user });
+        try {
+            const user = req.user; // Accede al objeto de usuario autenticado
+            const pedidos = await Pedido.find({ id_usuario: user.id });
+            const productoId = pedidos.map(pedido => pedido.id_producto);
+
+            // Consulta la colección "productos" para obtener los productos correspondientes
+            const productos = await Producto.find({ _id: { $in: productoId } });
+
+            // Asocia los productos con los pedidos utilizando el ID de producto
+            const pedidosConProductos = pedidos.map(pedido => {
+                const productoEncontrado = productos.find(producto => producto._id.toString() === pedido.id_producto);
+                return {
+                    ...pedido.toObject(),
+                    producto: {
+                        nombre: productoEncontrado.nombre,
+                        precio: productoEncontrado.precio
+                    }
+                };
+            });
+
+            // Renderiza la plantilla y envía los datos al cliente
+            res.render('pages/carrito/index.ejs', { user, pedidos: pedidosConProductos });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error del servidor');
+        }
+    } else {
+        res.redirect('/login');
+    }
+});
+
+
+
+
+app.get('/agregarCarrito/:id', (req, res) => {
+    const productoId = req.params.id;
+    if (req.isAuthenticated()) {
+        const user = req.user;
+        const newPedido = new Pedido({
+            id_producto: productoId,
+            id_usuario: user.id,
+            esta_pago: 'false'
+        });
+        newPedido.save()
+            .then(() => {
+                res.redirect('/carrito');
+            })
+            .catch((err) => {
+                console.error(err);
+                return res.render('pages/users/register.ejs', {
+                    message: '<span style="color: red; font-weight: bold;">Error al grabar producto en carrito</span>'
+                });
+            });
+        // res.render('pages/carrito/index.ejs', { user });
     } else {
         res.redirect('/login');
     }
@@ -185,7 +290,7 @@ app.get('/payment', (req, res) => {
 });
 
 // Ruta para el login
-app.get('/login', (req,res) => {
+app.get('/login', (req, res) => {
     res.render('pages/users/login.ejs')
 })
 
@@ -299,7 +404,7 @@ app.post('/register', (req, res) => {
 
 app.get('/dashboard', (req, res) => {
     if (req.isAuthenticated()) {
-        const user = req.user; // Accede al objeto de usuario autenticado
+        const user = req.user;
         if (user.es_admin) {
             res.render('pages/admin/dashboard.ejs', { user });
         } else {
