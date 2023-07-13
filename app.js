@@ -159,54 +159,7 @@ app.get('/logout', (req, res) => {
 
 
 
-// app.get('/carrito', async (req, res) => {
-//     if (req.isAuthenticated()) {
-//         try {
-//             const user = req.user; // Accede al objeto de usuario autenticado
-//             const pedidos = await Pedido.find({ id_usuario: user.id });
-//             res.json(pedidos);
-//             const productoId = pedidos.map(pedidos => pedidos.id_producto);
-//             console.log(productoId)
 
-//             // Consulta la colección "productos" para obtener los productos correspondientes
-//             const obtenerProductos = async () => {
-//                 try {
-//                     const productos = await Producto.find({ _id: { $in: productoId } });
-//                     return productos;
-//                 } catch (error) {
-//                     console.error(error);
-//                     throw error;
-//                 }
-//             };
-
-//             // Asocia los productos con los pedidos utilizando el ID de producto
-//             const asociarProductosConPedidos = (productos) => {
-//                 return pedidos.map(pedido => {
-//                     const productoEncontrado = productos.find(producto => producto._id.toString() === pedido.id_producto);
-//                     return {
-//                         ...pedido,
-//                         producto: productoEncontrado
-//                     };
-//                 });
-//             };
-
-//             // Ejecuta la consulta y el proceso de asociación de productos con pedidos
-//             obtenerProductos()
-//                 .then(productos => {
-//                     const pedidosConProductos = asociarProductosConPedidos(productos);
-//                     console.log(pedidosConProductos);
-//                 })
-//                 .catch(error => {
-//                     console.error(error);
-//                 });
-//         } catch (error) {
-//             console.error(error);
-//             res.status(500).send('Error del servidor');
-//         }
-//     } else {
-//         res.redirect('/login');
-//     }
-// });
 
 
 app.get('/carrito', async (req, res) => {
@@ -215,11 +168,7 @@ app.get('/carrito', async (req, res) => {
             const user = req.user; // Accede al objeto de usuario autenticado
             const pedidos = await Pedido.find({ id_usuario: user.id });
             const productoId = pedidos.map(pedido => pedido.id_producto);
-
-            // Consulta la colección "productos" para obtener los productos correspondientes
             const productos = await Producto.find({ _id: { $in: productoId } });
-
-            // Asocia los productos con los pedidos utilizando el ID de producto
             const pedidosConProductos = pedidos.map(pedido => {
                 const productoEncontrado = productos.find(producto => producto._id.toString() === pedido.id_producto);
                 return {
@@ -230,8 +179,6 @@ app.get('/carrito', async (req, res) => {
                     }
                 };
             });
-
-            // Renderiza la plantilla y envía los datos al cliente
             res.render('pages/carrito/index.ejs', { user, pedidos: pedidosConProductos });
         } catch (error) {
             console.error(error);
