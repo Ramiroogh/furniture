@@ -3,9 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
+.perfiluser>h1{
+    font-family: 'Public Sans', sans-serif;
+}
 .FormularioCompletarPerfil{
     padding: 1rem;
 }
