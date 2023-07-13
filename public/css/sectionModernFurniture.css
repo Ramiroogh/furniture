@@ -12,6 +12,10 @@
     color: grey;
 }
 
+.card-img-top{
+    height: 300px;
+}
+
 .NavSearchdiv{
     display: flex;
     justify-content: space-between;
@@ -28,7 +32,8 @@
 
 .contenedorcardtexto{
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    padding: 0px;
 }
 
 .contenedorcard{
@@ -45,7 +50,6 @@
 
 .contenedorcardtexto>h3{
     font-size: 1rem;
-    color: grey;
     font-family: 'Poppins', sans-serif;;
 }
 
