@@ -6,6 +6,7 @@ import { dirname } from 'path';
 import articulosRoutes from './src/routes/articulosRoutes.js';
 import User from './src/models/usuarios.js';
 import Pedido from './src/models/pedidos.js';
+import Pago from './src/models/pagos.js';
 
 
 // Parsear solicitudes HTTP de formularios
@@ -111,9 +112,42 @@ passport.deserializeUser((id, done) => {
 // routes
 app.use('/articulos', articulosRoutes);
 
-app.get('/pasarella', (req, res) => {
-    res.render('pages/pasarella/pasarella.ejs')
-})
+
+
+app.get('/pasarella', async (req, res) => {
+    if (req.isAuthenticated()) {
+        try {
+            const user = req.user; // Accede al objeto de usuario autenticado
+            const pedidos = await Pedido.find({ id_usuario: user.id });
+            const productoId = pedidos.map(pedido => pedido.id_producto);
+            const productos = await Producto.find({ _id: { $in: productoId } });
+            const pedidosConProductos = pedidos.map(pedido => {
+                const productoEncontrado = productos.find(producto => producto._id.toString() === pedido.id_producto);
+                if (productoEncontrado && !pedido.esta_pago) {
+                    return {
+                        ...pedido.toObject(),
+                        producto: {
+                            id: productoEncontrado.id,
+                            nombre: productoEncontrado.nombre,
+                            precio: productoEncontrado.precio
+                        }
+                    };
+                }
+                return null; // Ignorar pedidos con esta_pago == true o productos no encontrados
+            }).filter(pedido => pedido !== null);
+            res.render('pages/pasarella/pasarella.ejs', { user, pedidos: pedidosConProductos });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error del servidor');
+        }
+    } else {
+        res.redirect('/login');
+    }
+});
+
+
+
+
 
 // VERBOS HTTP
 app.get('/', (req, res) => {
@@ -165,6 +199,9 @@ app.get('/logout', (req, res) => {
 
 
 
+
+
+
 app.get('/carrito', async (req, res) => {
     if (req.isAuthenticated()) {
         try {
@@ -174,14 +211,17 @@ app.get('/carrito', async (req, res) => {
             const productos = await Producto.find({ _id: { $in: productoId } });
             const pedidosConProductos = pedidos.map(pedido => {
                 const productoEncontrado = productos.find(producto => producto._id.toString() === pedido.id_producto);
-                return {
-                    ...pedido.toObject(),
-                    producto: {
-                        nombre: productoEncontrado.nombre,
-                        precio: productoEncontrado.precio
-                    }
-                };
-            });
+                if (productoEncontrado && !pedido.esta_pago) {
+                    return {
+                        ...pedido.toObject(),
+                        producto: {
+                            nombre: productoEncontrado.nombre,
+                            precio: productoEncontrado.precio
+                        }
+                    };
+                }
+                return null; // Ignorar pedidos con esta_pago == true o productos no encontrados
+            }).filter(pedido => pedido !== null);
             res.render('pages/carrito/index.ejs', { user, pedidos: pedidosConProductos });
         } catch (error) {
             console.error(error);
@@ -239,10 +279,7 @@ app.get('/payment', (req, res) => {
     res.render('paymentForm');
 });
 
-// Ruta para el login
-// app.get('/login', (req, res) => {
-//     res.render('pages/users/login.ejs')
-// })
+
 
 // Ruta para mostrar el formulario de pago
 app.get('/payment', (req, res) => {
@@ -268,6 +305,38 @@ app.get('/register', (req, res) => {
 app.get('/registerOK', (req, res) => {
     res.render('pages/users/registerOK.ejs')
 })
+
+
+app.post('/pagar', async (req, res) => {
+    const { nombre, apellido, nroTarjeta, fechaVen, cvv, montoTotal, idProductos } = req.body;
+    try {
+        const user = req.user;
+        console.log(user.id)
+        const pago = new Pago();
+
+        pago.nombre = nombre;
+        pago.apellido = apellido;
+        pago.numeroTarjeta = nroTarjeta;
+        pago.fechaVencimiento = fechaVen;
+        pago.cvv = cvv;
+        pago.montoTotal = montoTotal;
+        pago.articulos = idProductos;
+
+        await pago.save();
+
+        await Pedido.updateMany(
+            { id_usuario: user.id, id_producto: { $in: idProductos } },
+            { esta_pago: true }
+        );
+
+        res.redirect('/carrito');
+    } catch (error) {
+        console.error('Error en el pago:', error);
+        res.redirect('/carrito');
+    }
+});
+
+
 
 
 app.post('/perfil',

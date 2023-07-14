@@ -2,13 +2,15 @@
     background-color: #3472cf;
     padding-bottom: 3rem;
 }
-.container_pasarella > h4 {
+
+.container_pasarella>h4 {
     color: white;
     padding: 2rem;
 }
 
+
 /* CONTAINER CARDS PAGO */
-.Card_Pago_Container{
+.Card_Pago_Container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,27 +22,30 @@
 }
 
 /* SECTION FORMULARIO */
-.MedioDePago{
+.MedioDePago {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: white;
     padding: 1rem;
-    
+
     border-radius: 1rem;
     height: 550px;
     width: 500px;
     gap: 2rem;
 }
-.MedioDePago > form {
+
+.MedioDePago>form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
+
 .MedioDePago label {
     color: grey;
 }
+
 .Input_DueñoTarjeta {
     width: 200px;
 }
@@ -49,41 +54,52 @@
     display: flex;
     flex-direction: column;
 }
-.VencimientoTarjeta>label{
+
+.VencimientoTarjeta>label {
     color: grey;
 }
-.MesAño > input {
-    width: 50px;
+
+.MesAño>input {
+    width: 110px;
 }
-.MesAño{
+
+.MesAño {
     display: flex;
     align-items: center;
 
 }
+
 .Slash {
-    margin: 0 10px; /* Ajusta el margen según sea necesario */
+    margin: 0 10px;
+    /* Ajusta el margen según sea necesario */
 }
-.CVV{
+
+.CVV {
     display: flex;
     flex-direction: column;
 }
-.CVV>input{
+
+.CVV>input {
     width: 60px;
 }
-.Credito-Debito{
+
+.Credito-Debito {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.ImagenesTarjetas{
+
+.ImagenesTarjetas {
     width: 60px;
     height: 30px;
 }
-.ImagenesTarjetasMP{
+
+.ImagenesTarjetasMP {
     width: 90px;
     height: 30px;
     padding-left: 0.5rem;
 }
+
 .Terminos_y_Condiciones_Formulario {
     display: flex;
     flex-direction: column;
@@ -94,8 +110,8 @@
 }
 
 
-    /* RESUMEN DE COMPRA */
-.ResumenParaPagar{
+/* RESUMEN DE COMPRA */
+.ResumenParaPagar {
     background-color: white;
     padding: 1rem;
     border-radius: 1rem;
@@ -104,26 +120,31 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.ResumenTotal{
+
+.ResumenTotal {
     display: flex;
 }
-.ResumenTotal > p {
+
+.ResumenTotal>p {
     font-size: 20px;
 }
-.articulosAgregados{
+
+.articulosAgregados {
     text-align: center;
     margin: 1rem;
 }
-.TotalApagar{
+
+.TotalApagar {
     display: flex;
     justify-content: space-around;
 }
+
 .pagar_button {
     display: flex;
     justify-content: center;
     padding: 0.5rem;
     text-decoration: none;
-    background-color:#0057ff;
+    background-color: #0057ff;
     border: none;
     border-radius: 0.5rem;
     color: white;

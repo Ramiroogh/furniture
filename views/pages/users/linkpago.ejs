@@ -3,39 +3,37 @@
     <div class="Card_Pago_Container">
 
         <div class="MedioDePago">
-        
-            
-            <form action="">
+
+
+            <form action="/pagar" method="POST">
 
                 <div class="d-flex gap-3">
                     <div class="d-flex flex-column gap-2">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="Input_DueñoTarjeta" required>
+                        <input type="text" id="nombre" name="nombre" class="Input_DueñoTarjeta" required>
                     </div>
                     <div class="d-flex flex-column gap-2">
                         <label for="apellido">Apellido</label>
-                        <input type="text" class="Input_DueñoTarjeta" required>
+                        <input type="text" id="apellido" name="apellido" class="Input_DueñoTarjeta" required>
                     </div>
                 </div>
 
                 <div class="d-flex flex-column gap-2">
                     <label for="NumeroTarjeta">Numero de tarjeta</label>
-                    <input type="number" class="NumeroTarjeta" required>
+                    <input type="number" id="nroTarjeta" name="nroTarjeta" class="NumeroTarjeta" required>
                 </div>
-                    
+
                 <label for="FechaVencimiento">Fecha de vencimiento</label>
                 <div class="MesAño align-items-center">
-                    <input type="number" required>
-                    <span class="Slash">/</span>
-                    <input type="number" required>
+                    <input type="text" id="fechaVen" name="fechaVen" required placeholder="MM/AA">
                 </div>
                 <div class="CVV">
                     <label for="NumeroCVV">CVV</label>
-                    <input type="number" class="NumeroCVV" required>
+                    <input type="number" id="cvv" name="cvv" "NumeroCVV" required>
                 </div>
-            </form>
-            
-                
+                <!-- </form> -->
+
+
                 <div class="Terminos_y_Condiciones_Formulario">
                     <div class="Credito-Debito">
                         <img src="../../../img/Mastercard.PNG" alt="martecard" class="ImagenesTarjetas">
@@ -44,40 +42,51 @@
                     </div>
                     <div class="w-50 d-flex flex-column">
                         <p>Al realizar la compra, aceptas los términos y condiciones establecidos.</p>
-                        <p>Es importante que revises detenidamente estos términos, ya que contienen informaciónrelevante sobre tu compra, entrega, devoluciones y responsabilidades.    </p>
+                        <p>Es importante que revises detenidamente estos términos, ya que contienen informaciónrelevante
+                            sobre tu compra, entrega, devoluciones y responsabilidades. </p>
                         <a href="#">Ver terminos y condiciones</a>
                     </div>
                 </div>
-            </div>
+        </div>
 
 
         <div class="ResumenParaPagar">
             <div>
-            <h4>Resumen de compra</h4>
+                <h4>Resumen de compra</h4>
                 <div class="ResumenTotal">
-                    <div class="articulosAgregados">
-                        <p>Cantidad</p>
-                        <p>1</p>
-                    </div>
-                    <div class="articulosAgregados">
-                        <p>Articulo</p>
-                        <p>Descripcion del articulo</p>
-                    </div>
-                    <div class="articulosAgregados">
-                        <p>Precio</p>
-                        <p>$ 00.00</p>
+                    <div class="marco-compras-interior">
+                        <div class="marco-compras-interior-notitulo">
+                            <% let total=0; %>
+                                <% const arrayIDprod=[]; pedidos.forEach(pedido=> {
+                                    arrayIDprod.push(pedido.producto.id); %>
+                                    <div class="marco-compras-linea">
+                                        <span class="marco-compras-linea-detalle">
+                                            <%= pedido.producto.nombre %>
+                                        </span>
+                                        <span class="marco-compras-linea-subtotal">$<%= pedido.producto.precio %>
+                                        </span>
+                                    </div>
+                                    <% total +=pedido.producto.precio; %>
+                                        <% }); %>
+                        </div>
                     </div>
                 </div>
             </div>
-                
-                <div>
-                    <div class="TotalApagar">
-                        <h4>Total</h4>
-                        <p>$ 00.00</p>
-                    </div>
-                    <hr>
-                    <a class="pagar_button" href="#">Pagar</a>
+
+            <div>
+                <div class="TotalApagar">
+                    <h4>Total</h4>
+                    <% arrayIDprod.forEach(id=> { %>
+                        <input type="hidden" name="idProductos[]" id="idProductos[]" value="<%= id %>">
+                        <% }); %>
+                            <input type="hidden" name="montoTotal" id="montoTotal" value="<%= total %>">
+                            <p>$ <%= total %>
+                            </p>
                 </div>
+                <hr>
+                <button class="pagar_button" type="submit">Pagar</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
