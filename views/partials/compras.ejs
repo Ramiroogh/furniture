@@ -18,6 +18,12 @@
                                 <% let total=0; %>
                                     <% pedidos.forEach(pedido=> { %>
                                         <div class="marco-compras-linea">
+                                            <span>
+                                                <a href="/borraritems/<%= pedido.producto.id %>" class="btn_enlace">
+                                                    <i class="bi bi-x-circle"></i>
+                                                </a>
+
+                                            </span>
                                             <span class="marco-compras-linea-detalle">
                                                 <%= pedido.producto.nombre %>
                                             </span>

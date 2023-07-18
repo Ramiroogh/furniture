@@ -114,6 +114,20 @@ app.use('/articulos', articulosRoutes);
 
 
 
+
+app.get('/mostrarPagos', (req, res) => {
+    Pago.find({})
+        .then(pagos => {
+            res.render('pages/admin/mostrarpagos', { pagos });
+
+        })
+        .catch(err => {
+            res.status(500).send('Error al obtener los pagos.');
+        });
+});
+
+
+
 app.get('/pasarella', async (req, res) => {
     if (req.isAuthenticated()) {
         try {
@@ -196,7 +210,22 @@ app.get('/logout', (req, res) => {
 
 
 
+app.get('/borraritems/:id', (req, res) => {
+    const id = req.params.id;
 
+    // Lógica para eliminar el pedido con el ID de producto proporcionado
+    Pedido.findOneAndDelete({ _id: id })
+        .then(result => {
+            if (!result) {
+                return res.status(404).send('El pedido no existe.');
+            }
+
+            res.redirect('/carrito');
+        })
+        .catch(err => {
+            res.status(500).send('Error al eliminar el pedido.');
+        });
+});
 
 
 
@@ -215,6 +244,7 @@ app.get('/carrito', async (req, res) => {
                     return {
                         ...pedido.toObject(),
                         producto: {
+                            id: pedido.id,
                             nombre: productoEncontrado.nombre,
                             precio: productoEncontrado.precio
                         }
